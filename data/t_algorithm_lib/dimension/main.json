@@ -1,0 +1,29 @@
+{
+    "type": {
+        "name": "t_algorithm_lib:main",
+        "ultrawarm": false,
+        "natural": false,
+        "piglin_safe": true,
+        "respawn_anchor_works": true,
+        "bed_works": true,
+        "has_raids": true,
+        "has_skylight": true,
+        "has_ceiling": true,
+        "coordinate_scale": 1,
+        "ambient_light": 0,
+        "logical_height": 256,
+        "infiniburn": "minecraft:infiniburn_overworld"
+    },
+    "generator": {
+        "type": "minecraft:flat",
+        "settings": {
+            "biome": "minecraft:the_void",
+            "lakes": false,
+            "features": false,
+            "layers": [],
+            "structures": {
+                "structures": {}
+            }
+        }
+    }
+}

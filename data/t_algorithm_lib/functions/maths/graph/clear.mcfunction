@@ -1,0 +1,1 @@
+kill @e[tag=tal.maths.graph]

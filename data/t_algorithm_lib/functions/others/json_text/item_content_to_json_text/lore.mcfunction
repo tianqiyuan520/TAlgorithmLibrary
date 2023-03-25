@@ -1,0 +1,2 @@
+data remove storage t_algorithm_lib:item_to_json temp.item_lore
+execute if data storage t_algorithm_lib:item_to_json temp.item.tag.display.Lore run data modify storage t_algorithm_lib:item_to_json temp.item_lore set from storage t_algorithm_lib:item_to_json temp.item.tag.display.Lore

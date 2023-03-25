@@ -1,0 +1,1 @@
+summon armor_stand ~ ~ ~ {Tags:["tal.track_sharpen.entity1"],NoGravity:1b}

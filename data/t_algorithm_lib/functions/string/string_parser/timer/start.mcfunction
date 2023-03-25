@@ -1,0 +1,1 @@
+scoreboard players add #tal.str_p.char.timer tal.str_parser 1

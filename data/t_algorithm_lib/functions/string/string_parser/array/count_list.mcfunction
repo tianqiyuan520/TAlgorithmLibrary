@@ -1,0 +1,16 @@
+#计算数组元素个数
+scoreboard players remove #tal.str_p.array.count tal.str_parser 1
+
+data modify storage t_algorithm_lib:string_parser temp.array.Fakeobj set from storage t_algorithm_lib:string_parser temp.array.obj
+
+#判断 1为失败 0为成功
+execute store success score #tal.str_p.array.IsFail tal.str_parser run data modify storage t_algorithm_lib:string_parser temp.array.Fakeobj set from storage t_algorithm_lib:string_parser temp.array.array[0]
+execute if score #tal.str_p.array.IsFail tal.str_parser matches 0 run scoreboard players add #tal.str_p.char_to_id.objCount tal.str_parser 1
+
+data remove storage t_algorithm_lib:string_parser temp.array.array[0]
+
+
+
+
+#递归
+execute if score #tal.str_p.array.count tal.str_parser matches 1.. run function t_algorithm_lib:string/string_parser/array/count_list

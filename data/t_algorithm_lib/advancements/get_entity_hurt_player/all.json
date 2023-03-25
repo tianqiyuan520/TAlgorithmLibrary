@@ -1,0 +1,8 @@
+{
+        "criteria": {
+            "waf": {
+                "trigger": "impossible",
+                "conditions": {}
+            }
+        }
+    }

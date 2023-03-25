@@ -1,0 +1,3 @@
+execute store result score #tal.o.ITJ.item.map tal.str_parser run data get storage t_algorithm_lib:item_to_json temp.item.tag.map
+data modify block -29999999 3 20228222 Text4 set value '[{"text":"\\n"},{"translate":"filled_map.id","color":"#A8A8A8","with":[{"score":{"name": "#tal.o.ITJ.item.map","objective": "tal.str_parser"}}]}]'
+data modify storage t_algorithm_lib:item_to_json temp.string_list append from block -29999999 3 20228222 Text4

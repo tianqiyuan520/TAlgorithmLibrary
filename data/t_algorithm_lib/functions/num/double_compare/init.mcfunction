@@ -1,0 +1,3 @@
+##生成临时实体
+execute unless entity 00000000-0000-1d63-0000-000800000001 run summon area_effect_cloud -29999997.0 0.0 2022235.0 {Tags:["tal.num.double_compare","tal.num.double_compare.1"],UUID:[I;0,7523,8,1],Duration:1}
+execute unless entity 00000000-0000-1d63-0000-000800000002 run summon area_effect_cloud -29999997.0 0.0 2022235.0 {Tags:["tal.num.double_compare","tal.num.double_compare.2"],UUID:[I;0,7523,8,2],Duration:1}

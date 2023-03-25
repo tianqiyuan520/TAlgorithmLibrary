@@ -1,0 +1,15 @@
+﻿{
+  "pack": {
+    "pack_format": 6,
+    "description": [
+      {
+        "text": "TAlgorithmLibrary(T算法库)",
+        "color": "gold"
+      },
+      {
+        "text": "\nmade by tianqiyuan520",
+        "color": "gold"
+      }
+    ]
+  }
+}

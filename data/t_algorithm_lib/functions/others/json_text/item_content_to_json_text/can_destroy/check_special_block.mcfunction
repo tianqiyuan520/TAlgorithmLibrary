@@ -1,0 +1,5 @@
+execute if data storage t_algorithm_lib:item_to_json temp.check{id:"minecraft:air"} run data modify block ~ ~ ~ Text4 set value '[{"text":"\\n"},{"translate":"block.minecraft.air","color":"#545454"}]'
+execute if data storage t_algorithm_lib:item_to_json temp.check{id:"minecraft:void_air"} run data modify block ~ ~ ~ Text4 set value '[{"text":"\\n"},{"translate":"block.minecraft.void_air","color":"#545454"}]'
+execute if data storage t_algorithm_lib:item_to_json temp.check{id:"minecraft:cave_air"} run data modify block ~ ~ ~ Text4 set value '[{"text":"\\n"},{"translate":"block.minecraft.cave_air","color":"#545454"}]'
+execute if data storage t_algorithm_lib:item_to_json temp.check{id:"minecraft:water"} run data modify block ~ ~ ~ Text4 set value '[{"text":"\\n"},{"translate":"block.minecraft.water","color":"#545454"}]'
+execute if data storage t_algorithm_lib:item_to_json temp.check{id:"minecraft:lava"} run data modify block ~ ~ ~ Text4 set value '[{"text":"\\n"},{"translate":"block.minecraft.lava","color":"#545454"}]'

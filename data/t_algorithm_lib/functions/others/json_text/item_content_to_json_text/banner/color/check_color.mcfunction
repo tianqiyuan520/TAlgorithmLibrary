@@ -1,0 +1,16 @@
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 0 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color0
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 1 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color1
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 2 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color2
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 3 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color3
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 4 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color4
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 5 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color5
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 6 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color6
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 7 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color7
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 8 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color8
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 9 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color9
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 10 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color10
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 11 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color11
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 12 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color12
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 13 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color13
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 14 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color14
+execute if score #tal.o.ITJ.item_Pattern_color tal.str_parser matches 15 run function t_algorithm_lib:others/json_text/item_content_to_json_text/banner/color/color15
