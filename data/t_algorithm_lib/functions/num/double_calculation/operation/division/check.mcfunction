@@ -20,7 +20,9 @@ scoreboard players operation #tal.num.hpc.num3_pn tal.str_parser *= #tal.num.hpc
 #除数若为0
 execute unless score #tal.num.hpc.check2 tal.str_parser matches 1.. run tellraw @a [{"translate":"arguments.operation.div0","color": "red"}]
 
-execute if score #tal.num.hpc.check tal.str_parser matches 1 if score #tal.num.hpc.check2 tal.str_parser matches 1.. run function t_algorithm_lib:num/double_calculation/operation/division/before
-
 #若相等则直接=1
 execute if score #tal.num.hpc.check tal.str_parser matches 0 run data modify storage t_algorithm_lib:num double_calculation.temp.result set value [[1],["."],[0]]
+
+execute if score #tal.num.hpc.check tal.str_parser matches 1 if score #tal.num.hpc.check2 tal.str_parser matches 1.. run function t_algorithm_lib:num/double_calculation/operation/division/before
+
+

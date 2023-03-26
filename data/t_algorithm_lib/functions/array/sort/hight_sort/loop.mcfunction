@@ -2,7 +2,7 @@ summon armor_stand ~ ~ ~ {Tags:["tal.array.hight_sort.entity"],NoGravity:1b,Invu
 
 
 # execute as @e[tag=tal.array.hight_sort.entity,sort=nearest,distance=..1,limit=1] run data modify entity @s Pos[1] set from storage t_algorithm_lib:array hight_sort.list[0]
-execute as @e[tag=tal.array.hight_sort.entity,sort=nearest,distance=..1,limit=1] store result entity @s Pos[1] double 1.0 run data get storage t_algorithm_lib:array hight_sort.list[0]
+execute as @e[tag=tal.array.hight_sort.entity,sort=nearest,distance=..1,limit=1] store result entity @s Pos[1] double 0.01 run data get storage t_algorithm_lib:array hight_sort.list[0] 100
 
 
 

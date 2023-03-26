@@ -1,5 +1,6 @@
 ###Double 转 列表
 ##1.23d -> [[1],['.'],[2],[3]]
+##若是负数，则输出 数组与记分板#tal.array.double_to_array.negative tal.str_parser
 ##采用facing代替distance，避免double溢出
 ##新采用谓词代替facing（因为facing范围10^155）
 ##[自定义]Double
@@ -10,7 +11,7 @@ scoreboard players set #tal.array.double_to_array.no_double tal.str_parser 0
 execute store success score #tal.array.double_to_array.num tal.str_parser run data modify storage t_algorithm_lib:array double_to_array.list append from storage t_algorithm_lib:array double_to_array.num
 execute if score #tal.array.double_to_array.num tal.str_parser matches 0 run scoreboard players set #tal.array.double_to_array.no_double tal.str_parser 1
 execute if score #tal.array.double_to_array.num tal.str_parser matches 0 store result storage t_algorithm_lib:array double_to_array.num double 1 run data get storage t_algorithm_lib:array double_to_array.num
-
+##该数字的正负性 0非负 1负
 scoreboard players set #tal.array.double_to_array.negative tal.str_parser 0
 scoreboard players set #-1 tal.str_parser -1
 execute store result score #tal.array.double_to_array.num tal.str_parser run data get storage t_algorithm_lib:array

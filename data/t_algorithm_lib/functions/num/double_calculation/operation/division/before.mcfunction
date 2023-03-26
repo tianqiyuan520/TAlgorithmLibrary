@@ -81,4 +81,6 @@ function t_algorithm_lib:num/double_calculation/operation/division/start
 # tellraw @a ["小数点2 ",{"score":{"objective":"tal.str_parser","name":"#tal.num.hpc.division.fill_t"}}]
 function t_algorithm_lib:num/double_calculation/operation/division/end
 
-tellraw @a ["结果 ",{"nbt":"double_calculation.temp.result","storage": "t_algorithm_lib:num","color":"#B8DC9C"}]
+# tellraw @a ["结果 ",{"nbt":"double_calculation.temp.result","storage": "t_algorithm_lib:num","color":"#B8DC9C"}]
+
+

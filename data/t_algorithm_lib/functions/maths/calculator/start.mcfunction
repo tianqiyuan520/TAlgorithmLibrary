@@ -23,7 +23,7 @@ data modify storage t_algorithm_lib:maths calculator.main.stack set value [[[],[
 
 
 data modify storage t_algorithm_lib:maths calculator.main.stack[-1][0] set from storage t_algorithm_lib:maths calculator.transformation.s1
-
+##返回结果 t_algorithm_lib:maths calculator.result
 
 function t_algorithm_lib:maths/calculator/main/start
 

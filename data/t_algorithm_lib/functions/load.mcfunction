@@ -8,3 +8,4 @@ scoreboard objectives add tal.a_star.d dummy {"text": "[T算法库-A*算法]距�
 ##常加载区
 forceload add -30000000 2022228
 forceload add -30000000 2022240
+forceload add -30000000 2022221

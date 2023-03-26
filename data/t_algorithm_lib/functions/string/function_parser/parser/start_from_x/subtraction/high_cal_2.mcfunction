@@ -43,4 +43,4 @@ execute if score #tal.str.temp.symbol tal.str_parser matches 0 run data modify s
 
 data modify storage t_algorithm_lib:string function_parser.temp.list2 append value [0.01]
 # execute store result storage t_algorithm_lib:string function_parser.temp.list2[-1][0] double 0.01 run scoreboard players get #tal.str.temp.num tal.str_parser
-data modify storage t_algorithm_lib:string function_parser.temp.list2[-1][0] set storage t_algorithm_lib:array double_array_to_double.result
+data modify storage t_algorithm_lib:string function_parser.temp.list2[-1][0] set from storage t_algorithm_lib:array double_array_to_double.result

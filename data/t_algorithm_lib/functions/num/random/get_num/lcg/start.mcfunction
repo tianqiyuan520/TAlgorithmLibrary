@@ -1,6 +1,6 @@
 ###获取随机数 线性同余
 ##源数据
-function t_algorithm_lib:num/random/get_seed/by_attributes/start
+function t_algorithm_lib:num/random/get_seed/by_attributes2/start
 scoreboard players operation #tal.num.random.seed tal.str_parser %= #10000 tal.str_parser
 scoreboard players operation #tal.num.random.lcg.num tal.str_parser = #tal.num.random.seed tal.str_parser
 # scoreboard players set #tal.num.random.lcg.num tal.str_parser 5421

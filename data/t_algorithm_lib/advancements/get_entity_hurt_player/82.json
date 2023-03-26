@@ -1,5 +1,5 @@
 {
-        "parent": "t_algorithm_lib:others/tools/get_entity_hurt_player/loot/all",
+        "parent": "t_algorithm_lib:get_entity_hurt_player/all",
         "criteria": {
             "waf": {
                 "trigger": "entity_hurt_player",

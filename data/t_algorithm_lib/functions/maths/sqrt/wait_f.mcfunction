@@ -21,7 +21,9 @@ data modify storage t_algorithm_lib:num double_calculation.temp.num2 set from st
 data modify storage t_algorithm_lib:num double_calculation.operation set value 4
 # schedule function t_algorithm_lib:maths/sqrt/wait_f_d 2t replace
 scoreboard players set #tal.num.hpc.division_continue tal.str_parser 1
-scoreboard players set #tal.num.hpc.division_precision tal.str_parser 14
+scoreboard players set #tal.num.hpc.division_precision tal.str_parser 8
+scoreboard players set #tal.num.hpc.ignore_eight tal.str_parser 1
+
 function t_algorithm_lib:num/double_calculation/operation/start
 function t_algorithm_lib:maths/sqrt/wait_f_d
 

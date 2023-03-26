@@ -16,6 +16,8 @@ data modify storage t_algorithm_lib:maths sqrt.n1 set from storage t_algorithm_l
 data modify storage t_algorithm_lib:num double_calculation.temp.num1 set from storage t_algorithm_lib:maths sqrt.n1
 data modify storage t_algorithm_lib:num double_calculation.temp.num2 set value ["0",".","5"]
 data modify storage t_algorithm_lib:num double_calculation.operation set value 3
+scoreboard players set #tal.num.hpc.ignore_eight tal.str_parser 1
+
 function t_algorithm_lib:num/double_calculation/operation/start
 
 

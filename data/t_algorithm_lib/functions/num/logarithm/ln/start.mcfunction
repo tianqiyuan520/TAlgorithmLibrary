@@ -25,7 +25,7 @@ function t_algorithm_lib:num/logarithm/ln/loop
 data modify storage t_algorithm_lib:ln return set value 0.0
 execute store result score #tal.num.ln.list_count tal.str_parser run data get storage t_algorithm_lib:num ln.list
 execute if score #tal.num.ln.list_count tal.str_parser matches 1.. run function t_algorithm_lib:num/logarithm/ln/cal
-##
+#
 scoreboard players operation #tal.num.ln.num2 tal.str_parser *= #tal.num.ln.2 tal.str_parser
 execute store result score #tal.num.ln.num5 tal.str_parser run data get storage t_algorithm_lib:ln return 100000
 scoreboard players operation #tal.num.ln.num5 tal.str_parser += #tal.num.ln.num2 tal.str_parser

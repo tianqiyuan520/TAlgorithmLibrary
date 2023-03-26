@@ -1,7 +1,7 @@
 ###DFS 处理嵌套数组
 ##返回 数组
 ##[[原数组的最深元素1],[原数组的最深元素2],[原数组的最深元素3],...] , [1,2,3,3,4,..(该元素对应的深度)]
-##传入的值
+##[自定义输入]数组
 # data modify storage t_algorithm_lib:array dfs.list set value []
 ##主树
 data modify storage t_algorithm_lib:array dfs.main_tree set value []

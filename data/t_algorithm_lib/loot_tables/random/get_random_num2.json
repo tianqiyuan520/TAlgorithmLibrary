@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "bonus_rolls": 0,
+            "conditions": [],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:dirt",
+                    "functions": [
+                        {
+                            "function": "set_attributes",
+                            "modifiers": [
+                                {
+                                    "name": "get_random",
+                                    "slot": "mainhand",
+                                    "operation": "addition",
+                                    "attribute": "minecraft:generic.luck",
+                                    "amount": {
+                                        "max": 0.999999,
+                                        "min": 0.000000
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_nbt",
+                            "tag": "{TAL:{num.random.get:1b}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

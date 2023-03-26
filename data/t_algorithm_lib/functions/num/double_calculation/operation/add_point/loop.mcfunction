@@ -5,6 +5,8 @@ execute if score #tal.num.hpc.add_point tal.str_parser matches 1 if score #tal.n
 
 execute if score #tal.num.hpc.add_point tal.str_parser matches 1 run data modify storage t_algorithm_lib:num double_calculation.add_point.result prepend value []
 execute if score #tal.num.hpc.add_point tal.str_parser matches 1 run data modify storage t_algorithm_lib:num double_calculation.add_point.result[0] append value '.'
+# execute store result score #tal.num.hpc.list_count tal.str_parser run data get storage t_algorithm_lib:num double_calculation.add_point.list
+# execute if score #tal.num.hpc.add_point tal.str_parser matches 1 if score #tal.num.hpc.list_count tal.str_parser matches 1 run data modify storage t_algorithm_lib:num double_calculation.add_point.result prepend value [0]
 # execute if score #tal.num.hpc.add_point tal.str_parser matches 1 run scoreboard players set #tal.num.hpc.add_point_end tal.str_parser 1
 
 
