@@ -8,5 +8,5 @@ data modify storage t_algorithm_lib:maths suffix_expression.transformation.s3 se
 data modify storage t_algorithm_lib:maths suffix_expression.transformation.s1 set value []
 data modify storage t_algorithm_lib:maths suffix_expression.transformation.s2 set value []
 
-execute store result score #tal.maths.suffix_expression.list_count tal.str_parser run data get storage t_algorithm_lib:maths suffix_expression.transformation.s3
-execute if score #tal.maths.suffix_expression.list_count tal.str_parser matches 1.. run function t_algorithm_lib:maths/suffix_expression/transformation/loop
+execute store result score #tal.maths.suffix_expression.list_count tal.input run data get storage t_algorithm_lib:maths suffix_expression.transformation.s3
+execute if score #tal.maths.suffix_expression.list_count tal.input matches 1.. run function t_algorithm_lib:maths/suffix_expression/transformation/loop

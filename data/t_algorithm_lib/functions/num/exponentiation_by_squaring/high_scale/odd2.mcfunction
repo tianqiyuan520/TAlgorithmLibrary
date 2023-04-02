@@ -1,7 +1,7 @@
 data modify storage t_algorithm_lib:num double_calculation set value {num1:0,num2:0,operation:3}
 data modify storage t_algorithm_lib:num double_calculation.temp.num1 set from storage t_algorithm_lib:num exponentiation_by_squaring.main.stack[0].num1
 data modify storage t_algorithm_lib:num double_calculation.temp.num2 set from storage t_algorithm_lib:num exponentiation_by_squaring.main.stack[-1].return
-scoreboard players set #tal.num.hpc.ignore_eight tal.str_parser 1
+scoreboard players set #tal.num.hpc.ignore_eight tal.input 1
 function t_algorithm_lib:num/double_calculation/operation/start
 
 

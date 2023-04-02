@@ -14,7 +14,7 @@ data modify storage t_algorithm_lib:num double_calculation.add.num2 set from sto
 
 
 #进位
-scoreboard players set #tal.num.hpc.add_extra tal.str_parser 0
+scoreboard players set #tal.num.hpc.add_extra tal.input 0
 #结果
 data modify storage t_algorithm_lib:num double_calculation.add_result set value []
 

@@ -6,5 +6,5 @@ execute as @e[tag=tal.array.random.entity.new,sort=nearest,distance=..1,limit=1]
 
 
 data remove storage t_algorithm_lib:array random.list[0]
-execute store result score #tal.array.random.list_count tal.str_parser run data get storage t_algorithm_lib:array random.list
-execute if score #tal.array.random.list_count tal.str_parser matches 1.. run function t_algorithm_lib:array/sort/random/loop
+execute store result score #tal.array.random.list_count tal.input run data get storage t_algorithm_lib:array random.list
+execute if score #tal.array.random.list_count tal.input matches 1.. run function t_algorithm_lib:array/sort/random/loop

@@ -8,13 +8,13 @@ data modify storage t_algorithm_lib:num nthroot.core.function[2][] set from stor
 data modify storage t_algorithm_lib:num nthroot.core.function[4][] set from storage t_algorithm_lib:num nthroot.core.input.num2
 ##求导后
 data modify storage t_algorithm_lib:num nthroot.core.function2 set value [["a1"],["*"],["x"],["^"],["a2"]]
-execute store result score #tal.num.nthroot.num tal.str_parser run data get storage t_algorithm_lib:num nthroot.core.input.num
+execute store result score #tal.num.nthroot.num tal.input run data get storage t_algorithm_lib:num nthroot.core.input.num
 data modify storage t_algorithm_lib:num nthroot.core.function2[0][] set from storage t_algorithm_lib:num nthroot.core.input.num
-execute store result storage t_algorithm_lib:num nthroot.core.function2[4][] double 1 run scoreboard players remove #tal.num.nthroot.num tal.str_parser 1
+execute store result storage t_algorithm_lib:num nthroot.core.function2[4][] double 1 run scoreboard players remove #tal.num.nthroot.num tal.input 1
 ##x的list
 data modify storage t_algorithm_lib:num nthroot.core.x_list set value [0.5]
-scoreboard players set #tal.num.nthroot.core.i tal.str_parser 0
-scoreboard players set #tal.num.nthroot.core.loop_end tal.str_parser 0
+scoreboard players set #tal.num.nthroot.core.i tal.input 0
+scoreboard players set #tal.num.nthroot.core.loop_end tal.input 0
 ##4个数字转化
 data modify storage t_algorithm_lib:num nthroot.core.function_num set value []
 

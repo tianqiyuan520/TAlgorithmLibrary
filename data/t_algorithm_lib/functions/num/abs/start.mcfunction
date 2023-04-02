@@ -6,7 +6,7 @@ data modify storage t_algorithm_lib:num abs.result set value 1.5d
 data modify storage t_algorithm_lib:array double_to_array.num set from storage t_algorithm_lib:num abs.input
 function t_algorithm_lib:array/double_to_array/start
 ##[自定义输入]double_array
-scoreboard players set #tal.array.DAToDouble.negative tal.str_parser 1
+scoreboard players set #tal.array.DAToDouble.negative tal.input 1
 data modify storage t_algorithm_lib:array double_array_to_double.input set from storage t_algorithm_lib:array double_to_array.result
 function t_algorithm_lib:array/double_array_to_double/start
 

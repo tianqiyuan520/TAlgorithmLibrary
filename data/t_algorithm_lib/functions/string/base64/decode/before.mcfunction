@@ -9,4 +9,5 @@ data modify storage t_algorithm_lib:string_parser io.parameter set value {limitT
 data modify storage t_algorithm_lib:string_parser io.command set value 'function t_algorithm_lib:string/base64/decode/wait_for_p'
 ##源数据 参数
 ##data modify storage t_algorithm_lib:string_parser io.input set value 'ewogICJ0aW1lc3RhbXAiIDogMTY2NTgzMDU3MzQ2NSwKICAic'
-schedule function t_algorithm_lib:string/string_parser/call 1t append
+function t_algorithm_lib:string/string_parser/call
+execute if score #tal.sign_version tal.input matches 2 run function t_algorithm_lib:string/base64/decode/wait_for_p

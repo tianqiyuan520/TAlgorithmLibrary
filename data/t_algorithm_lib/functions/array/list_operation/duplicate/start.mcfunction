@@ -5,6 +5,6 @@ data modify storage t_algorithm_lib:array list_operation.duplicate.result set va
 #
 data modify storage t_algorithm_lib:array list_operation.duplicate.result append from storage t_algorithm_lib:array list_operation.duplicate.list[0]
 data remove storage t_algorithm_lib:array list_operation.duplicate.list[0]
-execute store result score #tal.array.list_operation.duplicate.time tal.str_parser run data get storage t_algorithm_lib:array list_operation.duplicate.list
-execute if score #tal.array.list_operation.duplicate.time tal.str_parser matches 1.. run function t_algorithm_lib:array/list_operation/duplicate/loop
+execute store result score #tal.array.list_operation.duplicate.time tal.input run data get storage t_algorithm_lib:array list_operation.duplicate.list
+execute if score #tal.array.list_operation.duplicate.time tal.input matches 1.. run function t_algorithm_lib:array/list_operation/duplicate/loop
 data modify storage t_algorithm_lib:array list_operation.duplicate.list set value []

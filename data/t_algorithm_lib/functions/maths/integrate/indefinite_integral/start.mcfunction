@@ -7,9 +7,9 @@ data modify storage t_algorithm_lib:maths integrate.content set value []
 data modify storage t_algorithm_lib:maths integrate.temp.separation set from storage t_algorithm_lib:maths integrate.input
 # data modify storage t_algorithm_lib:maths integrate.temp.separation set value ['(', '2', '*', 'x', ')', '^', '2', '-', 'x', '-', '1', '+', '2', '*', 'x', '-', '(', 'x', '^', '3', '-', '(', 'c', 'o', 's', '(', '2', '*', 'x', '+', 'x', '^', '3', ')', ')', ')', '/', '(', '3', '*', 'x', ')']
 
-execute unless score #tal.maths.integrate.taylor tal.str_parser matches 1 run function t_algorithm_lib:maths/integrate/indefinite_integral/separate/start
-execute if score #tal.maths.integrate.taylor tal.str_parser matches 1 run data modify storage t_algorithm_lib:maths integrate.separation set from storage t_algorithm_lib:maths integrate.input
-scoreboard players set #tal.maths.integrate.taylor tal.str_parser 0
+execute unless score #tal.maths.integrate.taylor tal.input matches 1 run function t_algorithm_lib:maths/integrate/indefinite_integral/separate/start
+execute if score #tal.maths.integrate.taylor tal.input matches 1 run data modify storage t_algorithm_lib:maths integrate.separation set from storage t_algorithm_lib:maths integrate.input
+scoreboard players set #tal.maths.integrate.taylor tal.input 0
 
 data modify storage t_algorithm_lib:maths integrate.content set from storage t_algorithm_lib:maths integrate.separation
 
@@ -25,15 +25,15 @@ data modify storage t_algorithm_lib:maths integrate.content set from storage t_a
 # data modify storage t_algorithm_lib:maths integrate.content set value [['x'], ['*'], [2], ['*'], ['x'], ['*'], [2], ['*'], ['x']]
 
 ##分离符号
-scoreboard players set #tal.maths.integrate.only tal.str_parser 1
+scoreboard players set #tal.maths.integrate.only tal.input 1
 data modify storage t_algorithm_lib:maths integrate.temp.data set from storage t_algorithm_lib:maths integrate.content
-scoreboard players set #tal.maths.integrate.time tal.str_parser 999999
+scoreboard players set #tal.maths.integrate.time tal.input 999999
 function t_algorithm_lib:maths/integrate/indefinite_integral/separate/symbol/start
 data modify storage t_algorithm_lib:maths integrate.temp.data set from storage t_algorithm_lib:maths integrate.temp.data2
 data modify storage t_algorithm_lib:maths integrate.data set from storage t_algorithm_lib:maths integrate.temp.data2
 ##循环初步得到 是否积的列表
 data modify storage t_algorithm_lib:maths integrate.is_der set value []
-execute store result score #tal.maths.integrate.index tal.str_parser run data get storage t_algorithm_lib:maths integrate.temp.data
+execute store result score #tal.maths.integrate.index tal.input run data get storage t_algorithm_lib:maths integrate.temp.data
 function t_algorithm_lib:maths/integrate/indefinite_integral/get_first
 
 
@@ -41,11 +41,11 @@ data modify storage t_algorithm_lib:maths integrate.main_tree append value [[],[
 data modify storage t_algorithm_lib:maths integrate.main_tree[-1][0] set from storage t_algorithm_lib:maths integrate.data
 data modify storage t_algorithm_lib:maths integrate.main_tree[-1][2] set from storage t_algorithm_lib:maths integrate.is_der
 
-scoreboard players set #tal.maths.integrate.main.end tal.str_parser 0
+scoreboard players set #tal.maths.integrate.main.end tal.input 0
 
 ##开始循环
-scoreboard players set #tal.maths.integrate.main.time tal.str_parser 20
-scoreboard players set #tal.maths.integrate.main.is_return tal.str_parser 0
+scoreboard players set #tal.maths.integrate.main.time tal.input 20
+scoreboard players set #tal.maths.integrate.main.is_return tal.input 0
 function t_algorithm_lib:maths/integrate/indefinite_integral/main/loop
 
-execute if score #tal.maths.integrate.main.end tal.str_parser matches 1 run function t_algorithm_lib:maths/integrate/indefinite_integral/end
+execute if score #tal.maths.integrate.main.end tal.input matches 1 run function t_algorithm_lib:maths/integrate/indefinite_integral/end

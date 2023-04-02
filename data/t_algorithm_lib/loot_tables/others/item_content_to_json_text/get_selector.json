@@ -61,7 +61,7 @@
                             "condition": "entity_scores",
                             "entity": "this",
                             "scores": {
-                                "tal.str_parser": {
+                                "tal.input": {
                                     "min": 1,
                                     "max": 1
                                 }
@@ -118,7 +118,7 @@
                             "condition": "entity_scores",
                             "entity": "this",
                             "scores": {
-                                "tal.str_parser": {
+                                "tal.input": {
                                     "min": 0,
                                     "max": 0
                                 }

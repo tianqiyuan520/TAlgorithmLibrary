@@ -1,2 +1,2 @@
-execute if score #tal.array.get_element_by_index.index tal.str_parser matches 553 run data modify storage t_algorithm_lib:array get_element_by_index.list2 set from storage t_algorithm_lib:array get_element_by_index.list[553]
-execute if score #tal.array.get_element_by_index.index tal.str_parser matches 554 run data modify storage t_algorithm_lib:array get_element_by_index.list2 set from storage t_algorithm_lib:array get_element_by_index.list[554]
+execute if score #tal.array.get_element_by_index.index tal.input matches 553 run data modify storage t_algorithm_lib:array get_element_by_index.list2 set from storage t_algorithm_lib:array get_element_by_index.list[553]
+execute if score #tal.array.get_element_by_index.index tal.input matches 554 run data modify storage t_algorithm_lib:array get_element_by_index.list2 set from storage t_algorithm_lib:array get_element_by_index.list[554]

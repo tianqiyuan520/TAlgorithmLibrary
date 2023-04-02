@@ -11,8 +11,8 @@ data modify storage t_algorithm_lib:array find.list4 set value []
 ##结果
 data modify storage t_algorithm_lib:array find.return set value []
 ##指针
-scoreboard players set #tal.array.find.index tal.str_parser 0
+scoreboard players set #tal.array.find.index tal.input 0
 
-execute store result score #tal.array.find.list_count tal.str_parser run data get storage t_algorithm_lib:array find.list
-execute store result score #tal.array.find.list_count2 tal.str_parser run data get storage t_algorithm_lib:array find.list2
-execute if score #tal.array.find.list_count tal.str_parser matches 1.. if score #tal.array.find.list_count tal.str_parser >= #tal.array.find.list_count2 tal.str_parser run function t_algorithm_lib:array/find/loop
+execute store result score #tal.array.find.list_count tal.input run data get storage t_algorithm_lib:array find.list
+execute store result score #tal.array.find.list_count2 tal.input run data get storage t_algorithm_lib:array find.list2
+execute if score #tal.array.find.list_count tal.input matches 1.. if score #tal.array.find.list_count tal.input >= #tal.array.find.list_count2 tal.input run function t_algorithm_lib:array/find/loop

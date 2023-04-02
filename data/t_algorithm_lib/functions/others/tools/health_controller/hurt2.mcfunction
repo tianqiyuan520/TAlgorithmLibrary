@@ -1,15 +1,15 @@
 #扣除 伤害吸收的血量
 #剩余的伤害吸收
-scoreboard players operation #tal.health_controller.AbsorptionAmount tal.str_parser -= #tal.health_controller.Hurt tal.str_parser
+scoreboard players operation #tal.health_controller.AbsorptionAmount tal.input -= #tal.health_controller.Hurt tal.input
 #判断单复数
-scoreboard players operation #tal.health_controller.Absorption_check tal.str_parser = #tal.health_controller.AbsorptionAmount tal.str_parser
-scoreboard players set #TFT.2 tal.str_parser 2
+scoreboard players operation #tal.health_controller.Absorption_check tal.input = #tal.health_controller.AbsorptionAmount tal.input
+scoreboard players set #TFT.2 tal.input 2
 #求余
-scoreboard players operation #tal.health_controller.Absorption_check tal.str_parser %= #TFT.2 tal.str_parser
+scoreboard players operation #tal.health_controller.Absorption_check tal.input %= #TFT.2 tal.input
 #如果为复数
-execute if entity @s[tag=!tal.health_controller.AbsorptionAmount.end] if score #tal.health_controller.Absorption_check tal.str_parser matches 0 run function t_algorithm_lib:others/tools/health_controller/absorption/if_multiple
+execute if entity @s[tag=!tal.health_controller.AbsorptionAmount.end] if score #tal.health_controller.Absorption_check tal.input matches 0 run function t_algorithm_lib:others/tools/health_controller/absorption/if_multiple
 #如果为单数
-execute if entity @s[tag=!tal.health_controller.AbsorptionAmount.end] if score #tal.health_controller.Absorption_check tal.str_parser matches 1.. run function t_algorithm_lib:others/tools/health_controller/absorption/odd_numbers
+execute if entity @s[tag=!tal.health_controller.AbsorptionAmount.end] if score #tal.health_controller.Absorption_check tal.input matches 1.. run function t_algorithm_lib:others/tools/health_controller/absorption/odd_numbers
 effect clear @s absorption
 
 #生成 药水云

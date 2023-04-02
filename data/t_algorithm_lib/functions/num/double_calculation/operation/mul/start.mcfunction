@@ -7,9 +7,9 @@ data modify storage t_algorithm_lib:num double_calculation.mul.num2 set from sto
 # function t_algorithm_lib:num/double_calculation/operation/complement/start
 
 #个位数
-scoreboard players set #tal.num.hpc.mul_extra tal.str_parser 0
-scoreboard players set #tal.num.hpc.mul_zero_time tal.str_parser 0
-scoreboard players set #tal.num.hpc.mul_zero_time_ tal.str_parser 0
+scoreboard players set #tal.num.hpc.mul_extra tal.input 0
+scoreboard players set #tal.num.hpc.mul_zero_time tal.input 0
+scoreboard players set #tal.num.hpc.mul_zero_time_ tal.input 0
 #结果
 data modify storage t_algorithm_lib:num double_calculation.mul.num1_ set from storage t_algorithm_lib:num double_calculation.mul.num1
 
@@ -71,9 +71,9 @@ data modify storage t_algorithm_lib:num double_calculation.mul_results.list.9[1]
 
 
 ##逆序 循环
-execute store result score #tal.num.hpc.list_count1 tal.str_parser run data get storage t_algorithm_lib:num double_calculation.mul.num2
+execute store result score #tal.num.hpc.list_count1 tal.input run data get storage t_algorithm_lib:num double_calculation.mul.num2
 
-execute if score #tal.num.hpc.list_count1 tal.str_parser matches 1.. run function t_algorithm_lib:num/double_calculation/operation/mul/loop_mul_num
+execute if score #tal.num.hpc.list_count1 tal.input matches 1.. run function t_algorithm_lib:num/double_calculation/operation/mul/loop_mul_num
 
 ##读取最终结果，并相加
 function t_algorithm_lib:num/double_calculation/operation/mul/add_loop
@@ -81,10 +81,10 @@ function t_algorithm_lib:num/double_calculation/operation/mul/add_loop
 ##是否加0.000001
 # data modify storage t_algorithm_lib:num double_calculation.add_result set from storage t_algorithm_lib:num double_calculation.mul_result3[0]
 
-# execute store result score #tal.num.hpc.list_count1 tal.str_parser run data get storage t_algorithm_lib:num double_calculation.mul_result3[0][-2]
-# execute if score #tal.num.hpc.list_count1 tal.str_parser matches 9 run data modify storage t_algorithm_lib:num double_calculation.add.num1 set from storage t_algorithm_lib:num double_calculation.mul_result3[0]
-# execute if score #tal.num.hpc.list_count1 tal.str_parser matches 9 run data modify storage t_algorithm_lib:num double_calculation.add.num2 set value [1,0,0,0,0,0,0,0,0,0,0]
-# execute if score #tal.num.hpc.list_count1 tal.str_parser matches 9 run function t_algorithm_lib:num/double_calculation/operation/add/start
+# execute store result score #tal.num.hpc.list_count1 tal.input run data get storage t_algorithm_lib:num double_calculation.mul_result3[0][-2]
+# execute if score #tal.num.hpc.list_count1 tal.input matches 9 run data modify storage t_algorithm_lib:num double_calculation.add.num1 set from storage t_algorithm_lib:num double_calculation.mul_result3[0]
+# execute if score #tal.num.hpc.list_count1 tal.input matches 9 run data modify storage t_algorithm_lib:num double_calculation.add.num2 set value [1,0,0,0,0,0,0,0,0,0,0]
+# execute if score #tal.num.hpc.list_count1 tal.input matches 9 run function t_algorithm_lib:num/double_calculation/operation/add/start
 # data modify storage t_algorithm_lib:num double_calculation.mul_result3[0] set from storage t_algorithm_lib:num double_calculation.add_result
 
 
@@ -96,8 +96,8 @@ function t_algorithm_lib:num/double_calculation/operation/remove_l/loop
 
 ##读取 小数点
 data modify storage t_algorithm_lib:num double_calculation.add_point.list set from storage t_algorithm_lib:num double_calculation.remove_l.num1
-scoreboard players operation #tal.num.hpc.add_point tal.str_parser = #tal.num.hpc.num1_p tal.str_parser
-scoreboard players operation #tal.num.hpc.add_point tal.str_parser += #tal.num.hpc.num2_p tal.str_parser
+scoreboard players operation #tal.num.hpc.add_point tal.input = #tal.num.hpc.num1_p tal.input
+scoreboard players operation #tal.num.hpc.add_point tal.input += #tal.num.hpc.num2_p tal.input
 
 function t_algorithm_lib:num/double_calculation/operation/add_point/start
 data modify storage t_algorithm_lib:num double_calculation.mul_result4 set from storage t_algorithm_lib:num double_calculation.add_point.list

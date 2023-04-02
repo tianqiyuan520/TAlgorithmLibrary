@@ -15,6 +15,6 @@ data modify storage t_algorithm_lib:maths auto_derivation.temp.a prepend value [
 data modify storage t_algorithm_lib:maths auto_derivation.temp.b prepend value ['ln(']
 data modify storage t_algorithm_lib:maths auto_derivation.temp.list2 set from storage t_algorithm_lib:maths auto_derivation.temp.list3[0]
 function t_algorithm_lib:maths/auto_derivation/main/der/per/1/check_have_x
-execute if score #tal.maths.derivation.main.c-s tal.str_parser matches 1 run function t_algorithm_lib:maths/auto_derivation/main/der/per/1/log_x
-execute if score #tal.maths.derivation.main.c-s tal.str_parser matches 0 run function t_algorithm_lib:maths/auto_derivation/main/der/per/1/log_n
+execute if score #tal.maths.derivation.main.c-s tal.input matches 1 run function t_algorithm_lib:maths/auto_derivation/main/der/per/1/log_x
+execute if score #tal.maths.derivation.main.c-s tal.input matches 0 run function t_algorithm_lib:maths/auto_derivation/main/der/per/1/log_n
 

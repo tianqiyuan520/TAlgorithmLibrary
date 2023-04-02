@@ -9,5 +9,5 @@ execute unless data storage t_algorithm_lib:array int_array_to_double_array.list
 data modify storage t_algorithm_lib:array int_array_to_double_array.return set value []
 
 
-execute store result score #tal.array.int_array_to_double_array.num tal.str_parser run data get storage t_algorithm_lib:array int_array_to_double_array.list
-execute if score #tal.array.int_array_to_double_array.num tal.str_parser matches 1.. run function t_algorithm_lib:array/int_array_to_double_array/loop
+execute store result score #tal.array.int_array_to_double_array.num tal.input run data get storage t_algorithm_lib:array int_array_to_double_array.list
+execute if score #tal.array.int_array_to_double_array.num tal.input matches 1.. run function t_algorithm_lib:array/int_array_to_double_array/loop

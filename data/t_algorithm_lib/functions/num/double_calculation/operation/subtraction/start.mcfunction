@@ -12,14 +12,14 @@ data modify storage t_algorithm_lib:num double_calculation.subtraction.num1 set 
 data modify storage t_algorithm_lib:num double_calculation.subtraction.num2 set from storage t_algorithm_lib:num double_calculation.check.num2
 
 #进位
-scoreboard players set #tal.num.hpc.subtraction_extra tal.str_parser 0
+scoreboard players set #tal.num.hpc.subtraction_extra tal.input 0
 ##0的个数
-scoreboard players set #tal.num.hpc.subtraction_zero tal.str_parser 0
+scoreboard players set #tal.num.hpc.subtraction_zero tal.input 0
 #结果
 data modify storage t_algorithm_lib:num double_calculation.subtraction_result set value []
 
 ##逆序 循环
 function t_algorithm_lib:num/double_calculation/operation/subtraction/loop
 
-execute store result score #tal.num.hpc.list_count1 tal.str_parser run data get storage t_algorithm_lib:num double_calculation.subtraction_result
-execute if score #tal.num.hpc.subtraction_zero tal.str_parser = #tal.num.hpc.list_count1 tal.str_parser run data modify storage t_algorithm_lib:num double_calculation.subtraction_result set value [0]
+execute store result score #tal.num.hpc.list_count1 tal.input run data get storage t_algorithm_lib:num double_calculation.subtraction_result
+execute if score #tal.num.hpc.subtraction_zero tal.input = #tal.num.hpc.list_count1 tal.input run data modify storage t_algorithm_lib:num double_calculation.subtraction_result set value [0]

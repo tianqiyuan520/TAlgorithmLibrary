@@ -13,4 +13,4 @@ function t_algorithm_lib:string/function_parser/parser/separate/start
 function t_algorithm_lib:string/function_parser/parser/read/start
 
 ##精度 0为低精度，1为高精度
-scoreboard players set #tal.str.func_p.scale tal.str_parser 1
+scoreboard players set #tal.str.func_p.scale tal.input 1

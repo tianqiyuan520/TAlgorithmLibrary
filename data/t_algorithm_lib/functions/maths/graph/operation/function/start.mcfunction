@@ -2,7 +2,7 @@
 ##返回 坐标集
 ##通用：type类型 content内容 time持续时间(tick)
 ##循环终止
-scoreboard players set #tal.maths.graph.loop_end tal.str_parser 0
+scoreboard players set #tal.maths.graph.loop_end tal.input 0
 
 # data modify storage t_algorithm_lib:maths graph.operation.function.input set value {type:"function",content:{function:"2*cos(x)",variable:[{id:'x',value:{range:[3d,3d],step:0.1}}]},time:20,style:1}
 data modify storage t_algorithm_lib:maths graph.operation.function.result set value []
@@ -21,3 +21,4 @@ data modify storage t_algorithm_lib:string_parser io.command set value '/functio
 data modify storage t_algorithm_lib:string_parser io.input set from storage t_algorithm_lib:maths graph.operation.function.input.content.function
 
 function t_algorithm_lib:string/string_parser/call
+execute if score #tal.sign_version tal.input matches 2 run function t_algorithm_lib:maths/graph/operation/function/wait_for_p

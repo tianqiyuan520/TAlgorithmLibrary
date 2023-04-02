@@ -1,9 +1,9 @@
-execute store result score #tal.num.nthroot.num1 tal.str_parser run data get storage t_algorithm_lib:num nthroot.main.stack[-1].return
-execute store result score #tal.num.nthroot.num2 tal.str_parser run data get storage t_algorithm_lib:num nthroot.main.stack[-1].last
+execute store result score #tal.num.nthroot.num1 tal.input run data get storage t_algorithm_lib:num nthroot.main.stack[-1].return
+execute store result score #tal.num.nthroot.num2 tal.input run data get storage t_algorithm_lib:num nthroot.main.stack[-1].last
 
 
 ##牛顿迭代
-# tellraw @a ["指数: ",{"score":{"name": "#tal.num.nthroot.num2","objective": "tal.str_parser"},"color":"green"}]
+# tellraw @a ["指数: ",{"score":{"name": "#tal.num.nthroot.num2","objective": "tal.input"},"color":"green"}]
 # tellraw @a ["栈2 ",{"nbt":"nthroot.main.stack","storage":"t_algorithm_lib:num"}]
 
 

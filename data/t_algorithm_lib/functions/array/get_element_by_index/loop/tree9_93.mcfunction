@@ -1,2 +1,2 @@
-execute if score #tal.array.get_element_by_index.index tal.str_parser matches 187 run data modify storage t_algorithm_lib:array get_element_by_index.list2 set from storage t_algorithm_lib:array get_element_by_index.list[187]
-execute if score #tal.array.get_element_by_index.index tal.str_parser matches 188 run data modify storage t_algorithm_lib:array get_element_by_index.list2 set from storage t_algorithm_lib:array get_element_by_index.list[188]
+execute if score #tal.array.get_element_by_index.index tal.input matches 187 run data modify storage t_algorithm_lib:array get_element_by_index.list2 set from storage t_algorithm_lib:array get_element_by_index.list[187]
+execute if score #tal.array.get_element_by_index.index tal.input matches 188 run data modify storage t_algorithm_lib:array get_element_by_index.list2 set from storage t_algorithm_lib:array get_element_by_index.list[188]

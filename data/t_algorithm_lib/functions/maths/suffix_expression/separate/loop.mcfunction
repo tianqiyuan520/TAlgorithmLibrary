@@ -1,7 +1,7 @@
 #判断数字
 data modify storage t_algorithm_lib:maths suffix_expression.temp.list_check.num set from storage t_algorithm_lib:maths suffix_expression.temp.separation[0]
 
-execute store result score #tal.maths.suffix_expression.list_count tal.str_parser run data get storage t_algorithm_lib:maths suffix_expression.temp.list
+execute store result score #tal.maths.suffix_expression.list_count tal.input run data get storage t_algorithm_lib:maths suffix_expression.temp.list
 execute if data storage t_algorithm_lib:maths suffix_expression.temp.list_check{num:"0"} run data modify storage t_algorithm_lib:maths suffix_expression.temp.list append value 0
 execute if data storage t_algorithm_lib:maths suffix_expression.temp.list_check{num:"1"} run data modify storage t_algorithm_lib:maths suffix_expression.temp.list append value 1
 execute if data storage t_algorithm_lib:maths suffix_expression.temp.list_check{num:"2"} run data modify storage t_algorithm_lib:maths suffix_expression.temp.list append value 2
@@ -13,27 +13,27 @@ execute if data storage t_algorithm_lib:maths suffix_expression.temp.list_check{
 execute if data storage t_algorithm_lib:maths suffix_expression.temp.list_check{num:"7"} run data modify storage t_algorithm_lib:maths suffix_expression.temp.list append value 7
 execute if data storage t_algorithm_lib:maths suffix_expression.temp.list_check{num:"8"} run data modify storage t_algorithm_lib:maths suffix_expression.temp.list append value 8
 execute if data storage t_algorithm_lib:maths suffix_expression.temp.list_check{num:"9"} run data modify storage t_algorithm_lib:maths suffix_expression.temp.list append value 9
-execute store result score #tal.maths.suffix_expression.list_count2 tal.str_parser run data get storage t_algorithm_lib:maths suffix_expression.temp.list
+execute store result score #tal.maths.suffix_expression.list_count2 tal.input run data get storage t_algorithm_lib:maths suffix_expression.temp.list
 
-execute unless score #tal.maths.suffix_expression.list_count tal.str_parser = #tal.maths.suffix_expression.list_count2 tal.str_parser run data modify storage t_algorithm_lib:maths suffix_expression.temp.list append from storage t_algorithm_lib:maths suffix_expression.temp.separation[0]
+execute unless score #tal.maths.suffix_expression.list_count tal.input = #tal.maths.suffix_expression.list_count2 tal.input run data modify storage t_algorithm_lib:maths suffix_expression.temp.list append from storage t_algorithm_lib:maths suffix_expression.temp.separation[0]
 #存储 是否为数字
-execute unless score #tal.maths.suffix_expression.list_count tal.str_parser = #tal.maths.suffix_expression.list_count2 tal.str_parser run scoreboard players set #tal.maths.suffix_expression.is_num tal.str_parser 1
+execute unless score #tal.maths.suffix_expression.list_count tal.input = #tal.maths.suffix_expression.list_count2 tal.input run scoreboard players set #tal.maths.suffix_expression.is_num tal.input 1
 
 #如果不是数字
-execute if score #tal.maths.suffix_expression.list_count tal.str_parser = #tal.maths.suffix_expression.list_count2 tal.str_parser if score #tal.maths.suffix_expression.is_num tal.str_parser matches 1 run function t_algorithm_lib:maths/suffix_expression/separate/get_num
-execute if score #tal.maths.suffix_expression.list_count tal.str_parser = #tal.maths.suffix_expression.list_count2 tal.str_parser if score #tal.maths.suffix_expression.is_num tal.str_parser matches 1 run scoreboard players set #tal.maths.suffix_expression.is_num tal.str_parser 0
+execute if score #tal.maths.suffix_expression.list_count tal.input = #tal.maths.suffix_expression.list_count2 tal.input if score #tal.maths.suffix_expression.is_num tal.input matches 1 run function t_algorithm_lib:maths/suffix_expression/separate/get_num
+execute if score #tal.maths.suffix_expression.list_count tal.input = #tal.maths.suffix_expression.list_count2 tal.input if score #tal.maths.suffix_expression.is_num tal.input matches 1 run scoreboard players set #tal.maths.suffix_expression.is_num tal.input 0
 
-execute if score #tal.maths.suffix_expression.list_count tal.str_parser = #tal.maths.suffix_expression.list_count2 tal.str_parser run data modify storage t_algorithm_lib:maths suffix_expression.temp.n set from storage t_algorithm_lib:maths suffix_expression.temp.separation[0]
-execute if score #tal.maths.suffix_expression.list_count tal.str_parser = #tal.maths.suffix_expression.list_count2 tal.str_parser run function t_algorithm_lib:maths/suffix_expression/separate/check_special_func
-execute if score #tal.maths.suffix_expression.list_count tal.str_parser = #tal.maths.suffix_expression.list_count2 tal.str_parser unless score #tal.maths.suffix_expression.is_down_tier tal.str_parser matches 1 run function t_algorithm_lib:maths/suffix_expression/separate/end
+execute if score #tal.maths.suffix_expression.list_count tal.input = #tal.maths.suffix_expression.list_count2 tal.input run data modify storage t_algorithm_lib:maths suffix_expression.temp.n set from storage t_algorithm_lib:maths suffix_expression.temp.separation[0]
+execute if score #tal.maths.suffix_expression.list_count tal.input = #tal.maths.suffix_expression.list_count2 tal.input run function t_algorithm_lib:maths/suffix_expression/separate/check_special_func
+execute if score #tal.maths.suffix_expression.list_count tal.input = #tal.maths.suffix_expression.list_count2 tal.input unless score #tal.maths.suffix_expression.is_down_tier tal.input matches 1 run function t_algorithm_lib:maths/suffix_expression/separate/end
 
 
 
 data remove storage t_algorithm_lib:maths suffix_expression.temp.separation[0]
 
-execute store result score #tal.maths.suffix_expression.list_count tal.str_parser run data get storage t_algorithm_lib:maths suffix_expression.temp.separation
+execute store result score #tal.maths.suffix_expression.list_count tal.input run data get storage t_algorithm_lib:maths suffix_expression.temp.separation
 
-execute if score #tal.maths.suffix_expression.list_count tal.str_parser matches 0 if score #tal.maths.suffix_expression.is_num tal.str_parser matches 1 run function t_algorithm_lib:maths/suffix_expression/separate/get_num
+execute if score #tal.maths.suffix_expression.list_count tal.input matches 0 if score #tal.maths.suffix_expression.is_num tal.input matches 1 run function t_algorithm_lib:maths/suffix_expression/separate/get_num
 
 
-execute if score #tal.maths.suffix_expression.list_count tal.str_parser matches 1.. run function t_algorithm_lib:maths/suffix_expression/separate/loop
+execute if score #tal.maths.suffix_expression.list_count tal.input matches 1.. run function t_algorithm_lib:maths/suffix_expression/separate/loop

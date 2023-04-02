@@ -11,17 +11,17 @@
 #8.加减处理(index = len(该式子),终止)
 
 ##获取指针
-execute store result score #tal.maths.polynomial.main.index tal.str_parser run data get storage t_algorithm_lib:maths polynomial.main.main_tree[-1][1][0]
-execute store result score #tal.maths.polynomial.main.is_return tal.str_parser run data get storage t_algorithm_lib:maths polynomial.main.main_tree[-1][3][0]
+execute store result score #tal.maths.polynomial.main.index tal.input run data get storage t_algorithm_lib:maths polynomial.main.main_tree[-1][1][0]
+execute store result score #tal.maths.polynomial.main.is_return tal.input run data get storage t_algorithm_lib:maths polynomial.main.main_tree[-1][3][0]
 ##是否回溯
-execute if score #tal.maths.polynomial.main.is_return tal.str_parser matches 1 run function t_algorithm_lib:maths/polynomial/simplify/main/tree/return
+execute if score #tal.maths.polynomial.main.is_return tal.input matches 1 run function t_algorithm_lib:maths/polynomial/simplify/main/tree/return
 ##判断是否为初次
-execute if score #tal.maths.polynomial.main.is_return tal.str_parser matches 0 if score #tal.maths.polynomial.main.index tal.str_parser matches -1 run function t_algorithm_lib:maths/polynomial/simplify/main/tree/before
+execute if score #tal.maths.polynomial.main.is_return tal.input matches 0 if score #tal.maths.polynomial.main.index tal.input matches -1 run function t_algorithm_lib:maths/polynomial/simplify/main/tree/before
 ##指针增加
-execute if score #tal.maths.polynomial.main.is_return tal.str_parser matches 0 run function t_algorithm_lib:maths/polynomial/simplify/main/tree/index_add
+execute if score #tal.maths.polynomial.main.is_return tal.input matches 0 run function t_algorithm_lib:maths/polynomial/simplify/main/tree/index_add
 ##主体
-execute if score #tal.maths.polynomial.main.is_return tal.str_parser matches 0 if score #tal.maths.polynomial.main.index tal.str_parser matches 0.. run function t_algorithm_lib:maths/polynomial/simplify/main/tree/main/start
+execute if score #tal.maths.polynomial.main.is_return tal.input matches 0 if score #tal.maths.polynomial.main.index tal.input matches 0.. run function t_algorithm_lib:maths/polynomial/simplify/main/tree/main/start
 
 
-scoreboard players remove #tal.maths.polynomial.main.tree_loop tal.str_parser 1
-execute if score #tal.maths.polynomial.main.tree_loop tal.str_parser matches 1.. if score #tal.maths.polynomial.main.tree_end tal.str_parser matches 0 run function t_algorithm_lib:maths/polynomial/simplify/main/tree/main
+scoreboard players remove #tal.maths.polynomial.main.tree_loop tal.input 1
+execute if score #tal.maths.polynomial.main.tree_loop tal.input matches 1.. if score #tal.maths.polynomial.main.tree_end tal.input matches 0 run function t_algorithm_lib:maths/polynomial/simplify/main/tree/main

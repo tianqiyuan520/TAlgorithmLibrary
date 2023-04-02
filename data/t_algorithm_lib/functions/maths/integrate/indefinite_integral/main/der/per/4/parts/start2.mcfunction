@@ -11,14 +11,14 @@ data modify storage t_algorithm_lib:maths integrate.main_tree[-1][0][4] set from
 
 ##判断哪个积
 ##优先级
-scoreboard players set #tal.maths.integrate.symbol1 tal.str_parser 0
-scoreboard players set #tal.maths.integrate.symbol2 tal.str_parser 0
+scoreboard players set #tal.maths.integrate.symbol1 tal.input 0
+scoreboard players set #tal.maths.integrate.symbol2 tal.input 0
 function t_algorithm_lib:maths/integrate/indefinite_integral/main/der/per/4/parts/1
 function t_algorithm_lib:maths/integrate/indefinite_integral/main/der/per/4/parts/2
-# tellraw @a ["1 ",{"score":{"name": "#tal.maths.integrate.symbol1","objective": "tal.str_parser"}}]
-# tellraw @a ["2 ",{"score":{"name": "#tal.maths.integrate.symbol2","objective": "tal.str_parser"}}]
-execute if score #tal.maths.integrate.symbol1 tal.str_parser > #tal.maths.integrate.symbol2 tal.str_parser run data modify storage t_algorithm_lib:maths integrate.main_tree[-1][0][6] set from storage t_algorithm_lib:maths integrate.main.new_data[0]
-execute if score #tal.maths.integrate.symbol1 tal.str_parser > #tal.maths.integrate.symbol2 tal.str_parser run data modify storage t_algorithm_lib:maths integrate.main_tree[-1][0][4] set from storage t_algorithm_lib:maths integrate.main.new_data[2]
+# tellraw @a ["1 ",{"score":{"name": "#tal.maths.integrate.symbol1","objective": "tal.input"}}]
+# tellraw @a ["2 ",{"score":{"name": "#tal.maths.integrate.symbol2","objective": "tal.input"}}]
+execute if score #tal.maths.integrate.symbol1 tal.input > #tal.maths.integrate.symbol2 tal.input run data modify storage t_algorithm_lib:maths integrate.main_tree[-1][0][6] set from storage t_algorithm_lib:maths integrate.main.new_data[0]
+execute if score #tal.maths.integrate.symbol1 tal.input > #tal.maths.integrate.symbol2 tal.input run data modify storage t_algorithm_lib:maths integrate.main_tree[-1][0][4] set from storage t_algorithm_lib:maths integrate.main.new_data[2]
 #
 
 

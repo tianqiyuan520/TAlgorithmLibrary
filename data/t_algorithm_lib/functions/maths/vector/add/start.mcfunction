@@ -7,13 +7,13 @@
 ##返回结果 一维数组
 data modify storage t_algorithm_lib:maths vector.add.result set value []
 ##[自定义输入] 加法模式或减法模式 (1/-1)
-# scoreboard players set #tal.maths.vector.add.mod tal.str_parser 1
+# scoreboard players set #tal.maths.vector.add.mod tal.input 1
 
 
 
 
-execute store result score #tal.maths.vector.add.num tal.str_parser run data get storage t_algorithm_lib:maths vector.add.vector1
-execute store result score #tal.maths.vector.add.loop tal.str_parser run data get storage t_algorithm_lib:maths vector.add.vector1
-execute store result score #tal.maths.vector.add.num2 tal.str_parser run data get storage t_algorithm_lib:maths vector.add.vector2
-execute unless score #tal.maths.vector.add.num tal.str_parser = #tal.maths.vector.add.num2 tal.str_parser run tellraw @a [{"text":"wrong"}]
-execute if score #tal.maths.vector.add.num tal.str_parser = #tal.maths.vector.add.num2 tal.str_parser if score #tal.maths.vector.add.loop tal.str_parser matches 1.. run function t_algorithm_lib:maths/vector/add/loop
+execute store result score #tal.maths.vector.add.num tal.input run data get storage t_algorithm_lib:maths vector.add.vector1
+execute store result score #tal.maths.vector.add.loop tal.input run data get storage t_algorithm_lib:maths vector.add.vector1
+execute store result score #tal.maths.vector.add.num2 tal.input run data get storage t_algorithm_lib:maths vector.add.vector2
+execute unless score #tal.maths.vector.add.num tal.input = #tal.maths.vector.add.num2 tal.input run tellraw @a [{"text":"wrong"}]
+execute if score #tal.maths.vector.add.num tal.input = #tal.maths.vector.add.num2 tal.input if score #tal.maths.vector.add.loop tal.input matches 1.. run function t_algorithm_lib:maths/vector/add/loop

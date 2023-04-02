@@ -1,7 +1,7 @@
 ##读取 小数点
 
 data modify storage t_algorithm_lib:num double_calculation.add_point.list set from storage t_algorithm_lib:num double_calculation.division_result
-scoreboard players operation #tal.num.hpc.add_point tal.str_parser = #tal.num.hpc.division.num_pr tal.str_parser
+scoreboard players operation #tal.num.hpc.add_point tal.input = #tal.num.hpc.division.num_pr tal.input
 
 function t_algorithm_lib:num/double_calculation/operation/division/add_point/start
 

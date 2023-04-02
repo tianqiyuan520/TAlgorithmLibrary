@@ -5,14 +5,14 @@ data modify storage t_algorithm_lib:string_parser io.parameter set from storage 
 
 # data modify storage t_algorithm_lib:string temp.return set value 1b
 data modify storage t_algorithm_lib:array take_num.list set from storage t_algorithm_lib:string_parser io.output
-execute store result score #tal.str.temp.list_count3 tal.str_parser run data get storage t_algorithm_lib:array take_num.list
+execute store result score #tal.str.temp.list_count3 tal.input run data get storage t_algorithm_lib:array take_num.list
 function t_algorithm_lib:array/take_str_num_for_array/start
-execute store result score #tal.str.temp.list_count4 tal.str_parser run data get storage t_algorithm_lib:array take_num.list2
+execute store result score #tal.str.temp.list_count4 tal.input run data get storage t_algorithm_lib:array take_num.list2
 
-execute unless score #tal.str.temp.list_count3 tal.str_parser = #tal.str.temp.list_count4 tal.str_parser run data modify storage t_algorithm_lib:string temp.return set value 0b
+execute unless score #tal.str.temp.list_count3 tal.input = #tal.str.temp.list_count4 tal.input run data modify storage t_algorithm_lib:string temp.return set value 0b
 
 
-execute if score #tal.str.temp.list_count3 tal.str_parser = #tal.str.temp.list_count4 tal.str_parser run data modify storage t_algorithm_lib:string temp.return set value 1b
+execute if score #tal.str.temp.list_count3 tal.input = #tal.str.temp.list_count4 tal.input run data modify storage t_algorithm_lib:string temp.return set value 1b
 
 ##显示
 # tellraw @a [{"nbt":"temp.return","storage": "t_algorithm_lib:string"}]

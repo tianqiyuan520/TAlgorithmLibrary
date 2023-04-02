@@ -1,1 +1,1 @@
-execute unless data storage t_algorithm_lib:string function_parser.temp.list_check{char:"-"} if score #tal.str.temp.negative tal.str_parser matches 1 run data modify storage t_algorithm_lib:num double_calculation.temp.num1 prepend value '-'
+execute unless data storage t_algorithm_lib:string function_parser.temp.list_check{char:"-"} if score #tal.str.temp.negative tal.input matches 1 run data modify storage t_algorithm_lib:num double_calculation.temp.num1 prepend value '-'

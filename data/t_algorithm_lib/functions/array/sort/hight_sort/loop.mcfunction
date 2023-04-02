@@ -7,5 +7,5 @@ execute as @e[tag=tal.array.hight_sort.entity,sort=nearest,distance=..1,limit=1]
 
 
 data remove storage t_algorithm_lib:array hight_sort.list[0]
-execute store result score #tal.array.hight_sort.list_count tal.str_parser run data get storage t_algorithm_lib:array hight_sort.list
-execute if score #tal.array.hight_sort.list_count tal.str_parser matches 1.. run function t_algorithm_lib:array/sort/hight_sort/loop
+execute store result score #tal.array.hight_sort.list_count tal.input run data get storage t_algorithm_lib:array hight_sort.list
+execute if score #tal.array.hight_sort.list_count tal.input matches 1.. run function t_algorithm_lib:array/sort/hight_sort/loop

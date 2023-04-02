@@ -42,8 +42,8 @@ execute if data storage t_algorithm_lib:item_to_json temp.item{id:"minecraft:net
 execute if data storage t_algorithm_lib:item_to_json temp.item{id:"minecraft:trident"} run data modify storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list set value [{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Amount:9,Operation:0,Slot:"mainhand",UUID:[I;2022,823,1,1]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Amount:1.1,Operation:0,Slot:"mainhand",UUID:[I;2022,823,1,2]}]
 
 
-execute store result score #tal.o.ITJ.list.count tal.str_parser run data get storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list
-execute if score #tal.o.ITJ.list.count tal.str_parser matches 1.. run scoreboard players set #tal.o.ITJ.equal tal.str_parser 1
+execute store result score #tal.o.ITJ.list.count tal.input run data get storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list
+execute if score #tal.o.ITJ.list.count tal.input matches 1.. run scoreboard players set #tal.o.ITJ.equal tal.input 1
 
 #装备
 execute if data storage t_algorithm_lib:item_to_json temp.item{id:"minecraft:leather_helmet"} run data modify storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list set value [{AttributeName:"generic.armor",Name:"generic.armor",Amount:1,Operation:0,Slot:"head",UUID:[I;2022,823,1,1]}]
@@ -76,12 +76,12 @@ execute if data storage t_algorithm_lib:item_to_json temp.item{id:"minecraft:net
 execute if data storage t_algorithm_lib:item_to_json temp.item{id:"minecraft:netherite_leggings"} run data modify storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list set value [{AttributeName:"generic.armor",Name:"generic.armor",Amount:6,Operation:0,Slot:"legs",UUID:[I;2022,823,1,1]},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,Slot:"legs",UUID:[I;2022,823,1,2]},{AttributeName:"generic.attack_knockback",Name:"generic.attack_knockback",Amount:1,Operation:0,UUID:[I;2022,823,1,3],Slot:"legs"}]
 execute if data storage t_algorithm_lib:item_to_json temp.item{id:"minecraft:netherite_boots"} run data modify storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list set value [{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,Slot:"feet",UUID:[I;2022,823,1,1]},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:3,Operation:0,Slot:"feet",UUID:[I;2022,823,1,2]},{AttributeName:"generic.attack_knockback",Name:"generic.attack_knockback",Amount:1,Operation:0,UUID:[I;2022,823,1,3],Slot:"feet"}]
 #锋利效果
-execute if data storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list[{AttributeName:"generic.attack_damage"}] if data storage t_algorithm_lib:item_to_json temp.item.tag.Enchantments[{id:"minecraft:sharpness"}] run execute store result score #tal.o.ITJ.Enchantments.lvl tal.str_parser run data get storage t_algorithm_lib:item_to_json temp.item.tag.Enchantments[{id:"minecraft:sharpness"}].lvl
+execute if data storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list[{AttributeName:"generic.attack_damage"}] if data storage t_algorithm_lib:item_to_json temp.item.tag.Enchantments[{id:"minecraft:sharpness"}] run execute store result score #tal.o.ITJ.Enchantments.lvl tal.input run data get storage t_algorithm_lib:item_to_json temp.item.tag.Enchantments[{id:"minecraft:sharpness"}].lvl
 
-execute if data storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list[{AttributeName:"generic.attack_damage"}] if data storage t_algorithm_lib:item_to_json temp.item.tag.Enchantments[{id:"minecraft:sharpness"}] run execute store result score #tal.o.ITJ.Attribute.Amount tal.str_parser run data get storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list[{AttributeName:"generic.attack_damage"}].Amount 10
+execute if data storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list[{AttributeName:"generic.attack_damage"}] if data storage t_algorithm_lib:item_to_json temp.item.tag.Enchantments[{id:"minecraft:sharpness"}] run execute store result score #tal.o.ITJ.Attribute.Amount tal.input run data get storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list[{AttributeName:"generic.attack_damage"}].Amount 10
 # 0.5 * 等级 + 0.5
-scoreboard players set #5 tal.str_parser 5
-scoreboard players operation #tal.o.ITJ.Enchantments.lvl tal.str_parser *= #5 tal.str_parser
-scoreboard players operation #tal.o.ITJ.Enchantments.lvl tal.str_parser += #5 tal.str_parser
-scoreboard players operation #tal.o.ITJ.Attribute.Amount tal.str_parser += #tal.o.ITJ.Enchantments.lvl tal.str_parser
-execute if data storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list[{AttributeName:"generic.attack_damage"}] if data storage t_algorithm_lib:item_to_json temp.item.tag.Enchantments[{id:"minecraft:sharpness"}] run execute store result storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list[{AttributeName:"generic.attack_damage"}].Amount double 0.1 run scoreboard players get #tal.o.ITJ.Attribute.Amount tal.str_parser
+scoreboard players set #5 tal.input 5
+scoreboard players operation #tal.o.ITJ.Enchantments.lvl tal.input *= #5 tal.input
+scoreboard players operation #tal.o.ITJ.Enchantments.lvl tal.input += #5 tal.input
+scoreboard players operation #tal.o.ITJ.Attribute.Amount tal.input += #tal.o.ITJ.Enchantments.lvl tal.input
+execute if data storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list[{AttributeName:"generic.attack_damage"}] if data storage t_algorithm_lib:item_to_json temp.item.tag.Enchantments[{id:"minecraft:sharpness"}] run execute store result storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.list[{AttributeName:"generic.attack_damage"}].Amount double 0.1 run scoreboard players get #tal.o.ITJ.Attribute.Amount tal.input

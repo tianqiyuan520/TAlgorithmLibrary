@@ -21,6 +21,6 @@ function t_algorithm_lib:array/array_to_array_have_array/check_tier
 
 data remove storage t_algorithm_lib:array temp.list_[0]
 
-execute store result score #tal.str.temp.list_count tal.str_parser run data get storage t_algorithm_lib:array temp.list_
+execute store result score #tal.str.temp.list_count tal.input run data get storage t_algorithm_lib:array temp.list_
 
-execute if score #tal.str.temp.list_count tal.str_parser matches 1.. run function t_algorithm_lib:array/array_to_array_have_array/loop
+execute if score #tal.str.temp.list_count tal.input matches 1.. run function t_algorithm_lib:array/array_to_array_have_array/loop

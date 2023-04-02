@@ -2,7 +2,7 @@ data modify storage t_algorithm_lib:maths calculator.temp.char set from storage 
 
 data modify storage t_algorithm_lib:maths calculator.temp.m set value []
 data modify storage t_algorithm_lib:maths calculator.temp.n set from storage t_algorithm_lib:maths calculator.args
-execute store result score #tal.maths.calculator.list_count tal.str_parser run data get storage t_algorithm_lib:maths calculator.temp.n
+execute store result score #tal.maths.calculator.list_count tal.input run data get storage t_algorithm_lib:maths calculator.temp.n
 
 function t_algorithm_lib:maths/calculator/main/check_unknown_loop
 

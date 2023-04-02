@@ -8,5 +8,5 @@ data modify storage t_algorithm_lib:string_parser io.command set value '/functio
 ##函数
 ## data modify storage t_algorithm_lib:string_parser io.input set value 'x^2'
 # function t_algorithm_lib:maths/polynomial/start
-schedule function t_algorithm_lib:string/string_parser/call 1t append
-
+function t_algorithm_lib:string/string_parser/call
+execute if score #tal.sign_version tal.input matches 2 run function t_algorithm_lib:maths/polynomial/wait_for_p

@@ -7,6 +7,6 @@
 ##返回结果
 data modify storage t_algorithm_lib:array binary_bit.not.result set value []
 
-execute store result score #tal.array.binary_bit.not.time tal.str_parser run data get storage t_algorithm_lib:array binary_bit.not.list
+execute store result score #tal.array.binary_bit.not.time tal.input run data get storage t_algorithm_lib:array binary_bit.not.list
 
-execute if score #tal.array.binary_bit.not.time tal.str_parser matches 1.. run function t_algorithm_lib:array/binary_bit/not/loop
+execute if score #tal.array.binary_bit.not.time tal.input matches 1.. run function t_algorithm_lib:array/binary_bit/not/loop

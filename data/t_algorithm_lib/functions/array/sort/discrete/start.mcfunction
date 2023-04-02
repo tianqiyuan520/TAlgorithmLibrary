@@ -25,7 +25,7 @@ function t_algorithm_lib:array/sort/dedup/start
 data modify storage t_algorithm_lib:array hight_sort.list set from storage t_algorithm_lib:array dedup.return
 function t_algorithm_lib:array/sort/hight_sort/start
 ##遍历 对应
-execute store result score #tal.array.discrete.list_count tal.str_parser run data get storage t_algorithm_lib:array discrete.list2
+execute store result score #tal.array.discrete.list_count tal.input run data get storage t_algorithm_lib:array discrete.list2
 data modify storage t_algorithm_lib:array discrete.list3 set from storage t_algorithm_lib:array hight_sort.return
 
-execute if score #tal.array.discrete.list_count tal.str_parser matches 1.. run function t_algorithm_lib:array/sort/discrete/loop
+execute if score #tal.array.discrete.list_count tal.input matches 1.. run function t_algorithm_lib:array/sort/discrete/loop

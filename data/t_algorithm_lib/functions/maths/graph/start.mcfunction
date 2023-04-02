@@ -24,5 +24,4 @@ data modify storage t_algorithm_lib:maths graph.main set value {}
 function t_algorithm_lib:maths/graph/main/start
 ##处理input（build）
 function t_algorithm_lib:maths/graph/main/build/start
-
-data modify storage t_algorithm_lib:maths graph.input set value [{type:"function",content:{function:"2*x+5",variable:[{id:'x',value:{range:[-3d,3d],step:0.1}}]},time:20,style:2}]
+execute unless data storage t_algorithm_lib:maths graph.input run data modify storage t_algorithm_lib:maths graph.input set value [{type:"function",content:{function:"2*x+5",variable:[{id:'x',value:{range:[-3d,3d],step:0.1}}]},time:20,style:2}]

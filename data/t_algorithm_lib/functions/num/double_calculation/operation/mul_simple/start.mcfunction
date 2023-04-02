@@ -7,7 +7,7 @@
 # function t_algorithm_lib:num/double_calculation/operation/complement/start
 
 #个位数
-scoreboard players set #tal.num.hpc.mul_simple_extra tal.str_parser 0
+scoreboard players set #tal.num.hpc.mul_simple_extra tal.input 0
 #结果
 data modify storage t_algorithm_lib:num double_calculation.mul_simple_result set value []
 #后续需加法

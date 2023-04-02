@@ -11,4 +11,5 @@ data modify storage t_algorithm_lib:string_parser io.input set from storage t_al
 ##源数据 参数 主串字符串A 子串字符串B
 execute unless data storage t_algorithm_lib:string kmp.input1 run data modify storage t_algorithm_lib:string kmp.input1 set value 'abababc'
 execute unless data storage t_algorithm_lib:string kmp.input2 run data modify storage t_algorithm_lib:string kmp.input2 set value 'aba'
-schedule function t_algorithm_lib:string/string_parser/call 1t append
+function t_algorithm_lib:string/string_parser/call
+execute if score #tal.sign_version tal.input matches 2 run function t_algorithm_lib:string/kmp/wait_for_p

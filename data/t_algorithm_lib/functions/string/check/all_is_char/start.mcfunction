@@ -6,4 +6,6 @@ data modify storage t_algorithm_lib:string_parser io.command set value '/functio
 
 ##源数据 参数
 # data modify storage t_algorithm_lib:string_parser io.input set value '1235'
-schedule function t_algorithm_lib:string/string_parser/call 1t append
+function t_algorithm_lib:string/string_parser/call
+
+execute if score #tal.sign_version tal.input matches 2 run function t_algorithm_lib:string/check/all_is_char/wait_for_p

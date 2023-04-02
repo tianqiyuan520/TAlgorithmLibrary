@@ -4,8 +4,8 @@
 ##渲染的
 data modify storage t_algorithm_lib:maths integrate.transform.display set value []
 data modify storage t_algorithm_lib:maths integrate.transform.result set value []
-scoreboard players set #tal.maths.integrate.deep tal.str_parser 0
-scoreboard players set #tal.maths.integrate.-1 tal.str_parser 0
+scoreboard players set #tal.maths.integrate.deep tal.input 0
+scoreboard players set #tal.maths.integrate.-1 tal.input 0
 
 function t_algorithm_lib:maths/integrate/indefinite_integral/transform/loop
 ##去除无意义括号

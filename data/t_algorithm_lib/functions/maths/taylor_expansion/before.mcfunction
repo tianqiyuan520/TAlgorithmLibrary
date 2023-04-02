@@ -11,6 +11,7 @@ data modify storage t_algorithm_lib:string_parser io.command set value '/functio
 data modify storage t_algorithm_lib:string_parser io.input set from storage t_algorithm_lib:maths taylor_expansion.function
 
 
-schedule function t_algorithm_lib:string/string_parser/call 1t append
-
+function t_algorithm_lib:string/string_parser/call
 data modify storage t_algorithm_lib:maths taylor_expansion.function set value 'x^2'
+
+execute if score #tal.sign_version tal.input matches 2 run function t_algorithm_lib:maths/taylor_expansion/wait_for_p

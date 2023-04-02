@@ -3,11 +3,11 @@
 ##["1","2",".","3"] -> [["1"],["2"],["."],["3"]]或[[1],[2],["."],[3]]
 
 
-##源数据 数组
+##[自定义输入]数组
 # data modify storage t_algorithm_lib:array temp.list_ set value []
 data modify storage t_algorithm_lib:array temp.list2 set value []
 
 
 function t_algorithm_lib:array/array_to_array_have_array/loop
-
+##返回结果
 data modify storage t_algorithm_lib:array temp.return set from storage t_algorithm_lib:array temp.list2

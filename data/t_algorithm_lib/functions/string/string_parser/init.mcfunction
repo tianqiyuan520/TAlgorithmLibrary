@@ -14,7 +14,7 @@ data remove storage t_algorithm_lib:string_parser io.command
 #玩家输出流 
 data modify storage t_algorithm_lib:string_parser io.output set value [""]
 #创建计分板
-scoreboard objectives add tal.str_parser dummy {"text": "[T算法库]字符串解析通用计分板","color": "green"}
+scoreboard objectives add tal.input dummy {"text": "[T算法库]字符串解析通用计分板","color": "green"}
 #字符串组 临时  解析 列表为json的text (解决 " 字符)
 # 存储字符串组，进行递归 remove
 data modify storage t_algorithm_lib:string_parser temp.chars set value []
@@ -24,14 +24,14 @@ data modify storage t_algorithm_lib:string_parser temp.charsCheck_IsChanged set 
 data modify storage t_algorithm_lib:string_parser temp.result set value ["",""]
 ###
 #进行二分法的准备
-scoreboard players set #tal.str_p.num.2 tal.str_parser 2
+scoreboard players set #tal.str_p.num.2 tal.input 2
     #获取 备选字的数量
-    execute store result score #tal.str_p.char_count tal.str_parser run data get storage t_algorithm_lib:string_parser preparation_chars
+    execute store result score #tal.str_p.char_count tal.input run data get storage t_algorithm_lib:string_parser preparation_chars
     #获取一半
-    execute store result score #tal.str_p.half tal.str_parser run data get storage t_algorithm_lib:string_parser preparation_chars
-    scoreboard players operation #tal.str_p.half tal.str_parser /= #tal.str_p.num.2 tal.str_parser
+    execute store result score #tal.str_p.half tal.input run data get storage t_algorithm_lib:string_parser preparation_chars
+    scoreboard players operation #tal.str_p.half tal.input /= #tal.str_p.num.2 tal.input
     #设置索引为 0
-    scoreboard players set #tal.str_p.index tal.str_parser 0
+    scoreboard players set #tal.str_p.index tal.input 0
 
 
 #搭建方块

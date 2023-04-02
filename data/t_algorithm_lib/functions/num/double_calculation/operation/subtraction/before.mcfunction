@@ -6,7 +6,7 @@
 # data modify storage t_algorithm_lib:num double_calculation.check.num2 set from storage t_algorithm_lib:num double_calculation.subtraction.num2
 
 ##进行小数补位
-# execute unless score #tal.num.hpc.num1_p tal.str_parser = #tal.num.hpc.num2_p tal.str_parser run function t_algorithm_lib:num/double_calculation/operation/complement/point_loop
+# execute unless score #tal.num.hpc.num1_p tal.input = #tal.num.hpc.num2_p tal.input run function t_algorithm_lib:num/double_calculation/operation/complement/point_loop
 
 # function t_algorithm_lib:num/double_calculation/operation/complement/start
 
@@ -21,7 +21,7 @@ function t_algorithm_lib:num/double_calculation/operation/remove_l/loop
 
 ##读取 小数点
 data modify storage t_algorithm_lib:num double_calculation.add_point.list set from storage t_algorithm_lib:num double_calculation.remove_l.num1
-scoreboard players operation #tal.num.hpc.add_point tal.str_parser = #tal.num.hpc.num1_p tal.str_parser
+scoreboard players operation #tal.num.hpc.add_point tal.input = #tal.num.hpc.num1_p tal.input
 
 
 function t_algorithm_lib:num/double_calculation/operation/add_point/start

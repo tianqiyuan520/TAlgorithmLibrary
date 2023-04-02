@@ -17,4 +17,4 @@ execute if data storage t_algorithm_lib:maths polynomial.main.this_data[1][0] ru
 #
 execute unless data storage t_algorithm_lib:maths polynomial.main.this_data[1][0] run data modify storage t_algorithm_lib:maths polynomial.main.main_tree[-1][0] set from storage t_algorithm_lib:maths polynomial.main.this_data[0]
 #
-execute store result storage t_algorithm_lib:maths polynomial.main.main_tree[-1][2][0] int 1 run scoreboard players get #tal.maths.polynomial.main.index tal.str_parser
+execute store result storage t_algorithm_lib:maths polynomial.main.main_tree[-1][2][0] int 1 run scoreboard players get #tal.maths.polynomial.main.index tal.input

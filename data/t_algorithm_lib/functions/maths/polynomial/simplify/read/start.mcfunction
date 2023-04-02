@@ -17,8 +17,8 @@ data modify storage t_algorithm_lib:maths polynomial.temp.list set value []
 data modify storage t_algorithm_lib:maths polynomial.main.main_tree set value [[[],[-1],[0],[0],['add']]]
 data modify storage t_algorithm_lib:maths polynomial.main.main_tree[-1][0] set from storage t_algorithm_lib:maths polynomial.separation
 ##[自定义]树主体循环次数
-# scoreboard players set #tal.maths.polynomial.main.tree_loop tal.str_parser 200
-scoreboard players set #tal.maths.polynomial.main.tree_end tal.str_parser 0
+# scoreboard players set #tal.maths.polynomial.main.tree_loop tal.input 200
+scoreboard players set #tal.maths.polynomial.main.tree_end tal.input 0
 
 function t_algorithm_lib:maths/polynomial/simplify/main/tree/main
 
@@ -26,5 +26,5 @@ function t_algorithm_lib:maths/polynomial/simplify/main/tree/main
 # function t_algorithm_lib:maths/polynomial/simplify/read/loop
 
 data modify storage t_algorithm_lib:maths polynomial.separation set value [[1],['-'],[0]]
-scoreboard players set #tal.maths.polynomial.main.tree_loop tal.str_parser 2000
+scoreboard players set #tal.maths.polynomial.main.tree_loop tal.input 2000
 

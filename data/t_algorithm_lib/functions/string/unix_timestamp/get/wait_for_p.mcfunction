@@ -14,6 +14,6 @@ data remove storage t_algorithm_lib:array take_num.list2[-1]
 ##数字合并
 data modify storage t_algorithm_lib:array temp.list set from storage t_algorithm_lib:array take_num.list2
 function t_algorithm_lib:array/num_array_to_num/start
-execute store result storage t_algorithm_lib:string timestamp.time int 1 run scoreboard players get #tal.array.temp.num tal.str_parser
+execute store result storage t_algorithm_lib:string timestamp.time int 1 run scoreboard players get #tal.array.temp.num tal.input
 ##转为现实时间
 function t_algorithm_lib:string/unix_timestamp/to_realistic_time/start

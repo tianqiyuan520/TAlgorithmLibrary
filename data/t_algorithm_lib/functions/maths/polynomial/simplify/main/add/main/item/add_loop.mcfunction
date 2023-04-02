@@ -7,5 +7,5 @@ execute if data storage t_algorithm_lib:maths polynomial.temp.list_check{char:"-
 
 
 data remove storage t_algorithm_lib:maths polynomial.add.list_power[0]
-execute store result score #tal.maths.polynomial.list_count tal.str_parser run data get storage t_algorithm_lib:maths polynomial.add.list_power
-execute if score #tal.maths.polynomial.list_count tal.str_parser matches 1.. run function t_algorithm_lib:maths/polynomial/simplify/main/add/main/item/add_loop
+execute store result score #tal.maths.polynomial.list_count tal.input run data get storage t_algorithm_lib:maths polynomial.add.list_power
+execute if score #tal.maths.polynomial.list_count tal.input matches 1.. run function t_algorithm_lib:maths/polynomial/simplify/main/add/main/item/add_loop

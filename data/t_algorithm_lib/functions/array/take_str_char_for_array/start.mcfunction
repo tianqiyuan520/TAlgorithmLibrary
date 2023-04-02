@@ -4,5 +4,5 @@
 #data modify storage t_algorithm_lib:array take_char.list set value ["1","2","3"]
 #
 data modify storage t_algorithm_lib:array take_char.list2 set value []
-execute store result score #tal.str.take_char.list_count tal.str_parser run data get storage t_algorithm_lib:array take_char.list
-execute if score #tal.str.take_char.list_count tal.str_parser matches 1.. run function t_algorithm_lib:array/take_str_char_for_array/loop
+execute store result score #tal.str.take_char.list_count tal.input run data get storage t_algorithm_lib:array take_char.list
+execute if score #tal.str.take_char.list_count tal.input matches 1.. run function t_algorithm_lib:array/take_str_char_for_array/loop

@@ -1,4 +1,4 @@
-scoreboard players set #tal.maths.polynomial.main.tree_end tal.str_parser 1
+scoreboard players set #tal.maths.polynomial.main.tree_end tal.input 1
 data modify storage t_algorithm_lib:maths polynomial.temp.list_check.char2 set from storage t_algorithm_lib:maths polynomial.main.main_tree[0][4][0]
 
 # 处理 [[[0]]]

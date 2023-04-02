@@ -41,5 +41,5 @@ execute if data storage t_algorithm_lib:array double_array_to_string_array{char:
 
 data remove storage t_algorithm_lib:array double_array_to_string_array.input[-1]
 
-execute store result score #tal.array.DATSA.list_count tal.str_parser run data get storage t_algorithm_lib:array double_array_to_string_array.input
-execute if score #tal.array.DATSA.list_count tal.str_parser matches 1.. run function t_algorithm_lib:array/double_array_to_string_array/loop_sp
+execute store result score #tal.array.DATSA.list_count tal.input run data get storage t_algorithm_lib:array double_array_to_string_array.input
+execute if score #tal.array.DATSA.list_count tal.input matches 1.. run function t_algorithm_lib:array/double_array_to_string_array/loop_sp

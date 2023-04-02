@@ -100,5 +100,5 @@ execute if data storage t_algorithm_lib:string base64.encode{list_check:"~"} run
 
 
 data remove storage t_algorithm_lib:string base64.encode.list1[0]
-execute store result score #tal.str.base64.encode.list_count tal.str_parser run data get storage t_algorithm_lib:string base64.encode.list1
-execute if score #tal.str.base64.encode.list_count tal.str_parser matches 1.. run function t_algorithm_lib:string/base64/encode/get_bin/loop
+execute store result score #tal.str.base64.encode.list_count tal.input run data get storage t_algorithm_lib:string base64.encode.list1
+execute if score #tal.str.base64.encode.list_count tal.input matches 1.. run function t_algorithm_lib:string/base64/encode/get_bin/loop

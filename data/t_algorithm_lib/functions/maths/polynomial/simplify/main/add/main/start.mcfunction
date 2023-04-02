@@ -16,15 +16,15 @@ data modify storage t_algorithm_lib:maths polynomial.add.list2 set from storage 
 data remove storage t_algorithm_lib:maths polynomial.temp.list[0]
 data remove storage t_algorithm_lib:maths polynomial.temp.list[0]
 data remove storage t_algorithm_lib:maths polynomial.temp.list[0]
-scoreboard players set #tal.maths.polynomial.temp.check_end tal.str_parser 0
+scoreboard players set #tal.maths.polynomial.temp.check_end tal.input 0
 
 #判断 第一项 是否含加减法
-scoreboard players set #tal.maths.polynomial.temp.check_symbol_ tal.str_parser 0
+scoreboard players set #tal.maths.polynomial.temp.check_symbol_ tal.input 0
 data modify storage t_algorithm_lib:maths polynomial.temp.list_check.char set from storage t_algorithm_lib:maths polynomial.add.list[1][0]
-execute if data storage t_algorithm_lib:maths polynomial.temp.list_check{char:"+"} run scoreboard players set #tal.maths.polynomial.temp.check_symbol_ tal.str_parser 1
-execute if data storage t_algorithm_lib:maths polynomial.temp.list_check{char:"-"} run scoreboard players set #tal.maths.polynomial.temp.check_symbol_ tal.str_parser 1
+execute if data storage t_algorithm_lib:maths polynomial.temp.list_check{char:"+"} run scoreboard players set #tal.maths.polynomial.temp.check_symbol_ tal.input 1
+execute if data storage t_algorithm_lib:maths polynomial.temp.list_check{char:"-"} run scoreboard players set #tal.maths.polynomial.temp.check_symbol_ tal.input 1
 #
 
 
-execute if score #tal.maths.polynomial.temp.check_symbol_ tal.str_parser matches 0 run function t_algorithm_lib:maths/polynomial/simplify/main/add/main/item_add_item
-execute if score #tal.maths.polynomial.temp.check_symbol_ tal.str_parser matches 1 run function t_algorithm_lib:maths/polynomial/simplify/main/add/main/items_add_item/start
+execute if score #tal.maths.polynomial.temp.check_symbol_ tal.input matches 0 run function t_algorithm_lib:maths/polynomial/simplify/main/add/main/item_add_item
+execute if score #tal.maths.polynomial.temp.check_symbol_ tal.input matches 1 run function t_algorithm_lib:maths/polynomial/simplify/main/add/main/items_add_item/start

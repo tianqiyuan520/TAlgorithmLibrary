@@ -38,5 +38,5 @@ execute if data storage t_algorithm_lib:num nthroot.temp.list_check{num:["-"]} r
 
 data remove storage t_algorithm_lib:num nthroot.temp.n3[-1]
 
-execute store result score #tal.num.nthroot.list_count tal.str_parser run data get storage t_algorithm_lib:num nthroot.temp.n3
-execute if score #tal.num.nthroot.list_count tal.str_parser matches 1.. run function t_algorithm_lib:num/nthroot/core/main/loop_sp
+execute store result score #tal.num.nthroot.list_count tal.input run data get storage t_algorithm_lib:num nthroot.temp.n3
+execute if score #tal.num.nthroot.list_count tal.input matches 1.. run function t_algorithm_lib:num/nthroot/core/main/loop_sp

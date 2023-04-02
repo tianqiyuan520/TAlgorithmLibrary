@@ -4,8 +4,8 @@
 ##渲染的
 data modify storage t_algorithm_lib:maths auto_derivation.transform.display set value []
 data modify storage t_algorithm_lib:maths auto_derivation.transform.result set value []
-scoreboard players set #tal.maths.derivation.deep tal.str_parser 0
-scoreboard players set #tal.maths.derivation.-1 tal.str_parser 0
+scoreboard players set #tal.maths.derivation.deep tal.input 0
+scoreboard players set #tal.maths.derivation.-1 tal.input 0
 
 function t_algorithm_lib:maths/auto_derivation/transform/loop
 ##去除无意义括号

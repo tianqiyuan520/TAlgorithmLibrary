@@ -18,5 +18,5 @@ function t_algorithm_lib:array/binary_bit/fill/start
 data modify storage t_algorithm_lib:array binary_bit.or.list set from storage t_algorithm_lib:array binary_bit.fill.list
 data modify storage t_algorithm_lib:array binary_bit.or.list2 set from storage t_algorithm_lib:array binary_bit.fill.list2
 
-execute store result score #tal.array.binary_bit.or.time tal.str_parser run data get storage t_algorithm_lib:array binary_bit.or.list
-execute if score #tal.array.binary_bit.or.time tal.str_parser matches 1.. run function t_algorithm_lib:array/binary_bit/or/loop
+execute store result score #tal.array.binary_bit.or.time tal.input run data get storage t_algorithm_lib:array binary_bit.or.list
+execute if score #tal.array.binary_bit.or.time tal.input matches 1.. run function t_algorithm_lib:array/binary_bit/or/loop

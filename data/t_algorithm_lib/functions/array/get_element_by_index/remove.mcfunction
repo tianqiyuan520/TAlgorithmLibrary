@@ -1,4 +1,4 @@
-scoreboard players remove #tal.array.get_element_by_index.index tal.str_parser 1025
+scoreboard players remove #tal.array.get_element_by_index.index tal.input 1025
 
 data remove storage t_algorithm_lib:array get_element_by_index.list[0]
 data remove storage t_algorithm_lib:array get_element_by_index.list[0]
@@ -1026,4 +1026,4 @@ data remove storage t_algorithm_lib:array get_element_by_index.list[0]
 data remove storage t_algorithm_lib:array get_element_by_index.list[0]
 data remove storage t_algorithm_lib:array get_element_by_index.list[0]
 
-execute if score #tal.array.get_element_by_index.index tal.str_parser matches 1025.. run function t_algorithm_lib:array/get_element_by_index/remove
+execute if score #tal.array.get_element_by_index.index tal.input matches 1025.. run function t_algorithm_lib:array/get_element_by_index/remove

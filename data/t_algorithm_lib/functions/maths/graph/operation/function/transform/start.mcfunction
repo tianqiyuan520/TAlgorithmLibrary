@@ -8,7 +8,7 @@ data modify storage t_algorithm_lib:maths graph.operation.function.transform.res
 
 ##x
 data modify storage t_algorithm_lib:array double_to_array.num set from storage t_algorithm_lib:maths graph.operation.function.transform.pos[0]
-scoreboard players set #tal.array.double_to_array.symbol tal.str_parser 1
+scoreboard players set #tal.array.double_to_array.symbol tal.input 1
 function t_algorithm_lib:array/double_to_array/start
 data modify storage t_algorithm_lib:string function_parser.temp.n1 set value []
 data modify storage t_algorithm_lib:string function_parser.temp.n3 set from storage t_algorithm_lib:array double_to_array.result
@@ -16,7 +16,7 @@ function t_algorithm_lib:string/function_parser/parser/start_from_x/loop_sp/loop
 data modify storage t_algorithm_lib:maths graph.operation.function.transform.pos_[0] set from storage t_algorithm_lib:string function_parser.temp.n1
 ##y
 data modify storage t_algorithm_lib:array double_to_array.num set from storage t_algorithm_lib:maths graph.operation.function.transform.pos[1]
-scoreboard players set #tal.array.double_to_array.symbol tal.str_parser 1
+scoreboard players set #tal.array.double_to_array.symbol tal.input 1
 function t_algorithm_lib:array/double_to_array/start
 data modify storage t_algorithm_lib:string function_parser.temp.n1 set value []
 data modify storage t_algorithm_lib:string function_parser.temp.n3 set from storage t_algorithm_lib:array double_to_array.result
@@ -24,7 +24,7 @@ function t_algorithm_lib:string/function_parser/parser/start_from_x/loop_sp/loop
 data modify storage t_algorithm_lib:maths graph.operation.function.transform.pos_[1] set from storage t_algorithm_lib:string function_parser.temp.n1
 ##z
 data modify storage t_algorithm_lib:array double_to_array.num set from storage t_algorithm_lib:maths graph.operation.function.transform.pos[2]
-scoreboard players set #tal.array.double_to_array.symbol tal.str_parser 1
+scoreboard players set #tal.array.double_to_array.symbol tal.input 1
 function t_algorithm_lib:array/double_to_array/start
 data modify storage t_algorithm_lib:string function_parser.temp.n1 set value []
 data modify storage t_algorithm_lib:string function_parser.temp.n3 set from storage t_algorithm_lib:array double_to_array.result

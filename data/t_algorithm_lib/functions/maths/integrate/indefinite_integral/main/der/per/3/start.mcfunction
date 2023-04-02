@@ -1,5 +1,5 @@
 ##复查
-scoreboard players set #tal.maths.integrate.time tal.str_parser 1
+scoreboard players set #tal.maths.integrate.time tal.input 1
 data modify storage t_algorithm_lib:maths integrate.temp.data set from storage t_algorithm_lib:maths integrate.main.this_data
 function t_algorithm_lib:maths/integrate/indefinite_integral/separate/symbol/start
 

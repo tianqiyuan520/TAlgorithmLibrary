@@ -5,4 +5,6 @@ data modify storage t_algorithm_lib:string jaro_similarity.strA set from storage
 
 data modify storage t_algorithm_lib:string_parser io.input set from storage t_algorithm_lib:string jaro_similarity.input2
 
-schedule function t_algorithm_lib:string/string_parser/call 1t append
+function t_algorithm_lib:string/string_parser/call
+
+execute if score #tal.sign_version tal.input matches 2 run function t_algorithm_lib:string/jaro_similarity/wait_for_p2

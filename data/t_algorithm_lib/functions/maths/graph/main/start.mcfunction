@@ -1,9 +1,9 @@
 ##主程序
 
 ##渲染坐标系轴 (默认为执行者的坐标)
-scoreboard players set #tal.maths.graph.axis.x tal.str_parser 0
-scoreboard players set #tal.maths.graph.axis.y tal.str_parser 0
-scoreboard players set #tal.maths.graph.axis.z tal.str_parser 0
+scoreboard players set #tal.maths.graph.axis.x tal.input 0
+scoreboard players set #tal.maths.graph.axis.y tal.input 0
+scoreboard players set #tal.maths.graph.axis.z tal.input 0
 ##原点
 execute align xyz run summon area_effect_cloud ~ ~ ~ {Tags:["tal.maths.graph.origin","tal.maths.graph"],Duration:100000}
 ##渲染函数的实体

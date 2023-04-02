@@ -19,10 +19,10 @@ data modify storage t_algorithm_lib:maths calculator.main.stack[-1][0] set from 
 
 data modify storage t_algorithm_lib:maths calculator.main.stack[-1][1] set value []
 
-execute store result score #tal.maths.calculator.list_count tal.str_parser run data get storage t_algorithm_lib:maths calculator.main.stack[-1][0]
+execute store result score #tal.maths.calculator.list_count tal.input run data get storage t_algorithm_lib:maths calculator.main.stack[-1][0]
 # tellraw @a ["新栈 ",{"nbt":"calculator.main.stack[-1]","storage":"t_algorithm_lib:maths"}]
 
-execute if score #tal.maths.calculator.list_count tal.str_parser matches 1.. run function t_algorithm_lib:maths/calculator/main/loop
+execute if score #tal.maths.calculator.list_count tal.input matches 1.. run function t_algorithm_lib:maths/calculator/main/loop
 
 
 ##处理完之后 根据函数，查表

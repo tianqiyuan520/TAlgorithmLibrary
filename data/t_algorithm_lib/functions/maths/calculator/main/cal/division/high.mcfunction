@@ -1,7 +1,7 @@
 data modify storage t_algorithm_lib:num double_calculation set value {num1:0,num2:0,operation:4}
 
 data modify storage t_algorithm_lib:array double_to_array.num set from storage t_algorithm_lib:maths calculator.main.stack[-1][1][-2][0]
-scoreboard players set #tal.array.double_to_array.symbol tal.str_parser 1
+scoreboard players set #tal.array.double_to_array.symbol tal.input 1
 function t_algorithm_lib:array/double_to_array/start
 data modify storage t_algorithm_lib:maths calculator.temp.n1 set value []
 data modify storage t_algorithm_lib:maths calculator.temp.n3 set from storage t_algorithm_lib:array double_to_array.result
@@ -19,7 +19,7 @@ data modify storage t_algorithm_lib:num double_calculation.temp.num2 set from st
 
 function t_algorithm_lib:num/double_calculation/operation/start
 ##[自定义输入]double_array
-scoreboard players operation #tal.array.DAToDouble.negative tal.str_parser = #tal.num.hpc.num3_pn tal.str_parser
+scoreboard players operation #tal.array.DAToDouble.negative tal.input = #tal.num.hpc.num3_pn tal.input
 data modify storage t_algorithm_lib:array double_array_to_double.input set from storage t_algorithm_lib:num double_calculation.temp.result
 function t_algorithm_lib:array/double_array_to_double/start
 
