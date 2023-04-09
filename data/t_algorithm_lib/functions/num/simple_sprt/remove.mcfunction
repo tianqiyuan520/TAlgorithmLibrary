@@ -1,0 +1,2 @@
+execute store result score #tal.num.simple_sprt.temp1 tal.input run scoreboard players remove #tal.num.simple_sprt.temp3 tal.input 1
+scoreboard players operation #tal.num.simple_sprt.temp1 tal.input *= #tal.num.simple_sprt.temp3 tal.input

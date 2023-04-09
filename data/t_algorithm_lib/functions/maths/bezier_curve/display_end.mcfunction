@@ -1,0 +1,1 @@
+scoreboard players set #tal.maths.bezier_curve.always tal.input 0

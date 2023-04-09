@@ -1,0 +1,2 @@
+execute if score #tal.array.get_element_by_index.index tal.input matches 371 run data modify storage t_algorithm_lib:array get_element_by_index.list2 set from storage t_algorithm_lib:array get_element_by_index.list[371]
+execute if score #tal.array.get_element_by_index.index tal.input matches 372 run data modify storage t_algorithm_lib:array get_element_by_index.list2 set from storage t_algorithm_lib:array get_element_by_index.list[372]

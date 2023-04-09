@@ -1,0 +1,2 @@
+execute store result score #tal.array.quick_sort.index tal.input run data get storage t_algorithm_lib:array quick_sort.mian.main_tree[-1][1][0]
+execute store result storage t_algorithm_lib:array quick_sort.mian.main_tree[-1][1][0] int 1 run scoreboard players add #tal.array.quick_sort.index tal.input 1

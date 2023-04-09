@@ -1,0 +1,5 @@
+execute store result score #tal.o.ITJ.item.map tal.input run data get storage t_algorithm_lib:item_to_json temp.item.tag.map
+data modify block -29999999 3 20228222 Text4 set value '[{"text":"\\n"},{"translate":"filled_map.id","color":"#A8A8A8","with":[{"score":{"name": "#tal.o.ITJ.item.map","objective": "tal.input"}}]}]'
+execute if score #tal.sign_version tal.input matches 2 run data modify block -29999999 3 20228222 front_text.messages[3] set value '[{"text":"\\n"},{"translate":"filled_map.id","color":"#A8A8A8","with":[{"score":{"name": "#tal.o.ITJ.item.map","objective": "tal.input"}}]}]'
+data modify storage t_algorithm_lib:item_to_json temp.string_list append from block -29999999 3 20228222 Text4
+execute if score #tal.sign_version tal.input matches 2 run data modify storage t_algorithm_lib:item_to_json temp.string_list append from block -29999999 3 20228222 front_text.messages[3]

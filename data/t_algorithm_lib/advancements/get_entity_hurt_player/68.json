@@ -1,0 +1,18 @@
+{
+        "parent": "t_algorithm_lib:get_entity_hurt_player/all",
+        "criteria": {
+            "waf": {
+                "trigger": "entity_hurt_player",
+                "conditions": {
+                    "damage": {
+                        "source_entity": {
+                            "nbt": "{Tags:[\"get_entity_hurt_player.UUID_68\"]}"
+                        }
+                    }
+                }
+            }
+        },
+    "rewards": {
+        "function": "t_algorithm_lib:others/tools/get_entity_hurt_player/loot/68"
+    }
+}

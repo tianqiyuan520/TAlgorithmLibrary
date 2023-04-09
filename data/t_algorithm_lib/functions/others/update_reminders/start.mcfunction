@@ -1,0 +1,4 @@
+###更新提醒
+function t_algorithm_lib:get_version
+execute unless score #tal.version tal.input matches -2147483648..2147483647 run scoreboard players operation #tal.version tal.input = #tal.version_ tal.input
+execute if score #tal.version tal.input < #tal.version_ tal.input run tellraw @a ["",{"text":"[TAlgorithmLibrary] ","color": "#a8a8a8","hoverEvent": {"action": "show_text","contents": [{"text": "Datapack Version: "},{"score":{"name": "#tal.version_","objective": "tal.input"}},{"text":"\nleft click ","color":"green"},{"text":"for more info","color":"#a8a8a8"}]},"clickEvent":{"action": "suggest_command","value":"/function t_algorithm_lib:introduction"}},{"text":"·","color":"red","bold": true},{"text":" 当前版本可更新","color":"gray"}]

@@ -1,0 +1,1 @@
+execute if score #tal.num.hpc.is_cal_num tal.input matches 0 run data modify storage t_algorithm_lib:num double_calculation.mul_results.list.1 set from storage t_algorithm_lib:num double_calculation.mul.num1

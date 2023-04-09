@@ -1,0 +1,2 @@
+execute store result score #tal.tree.reload_id.index tal.input run data get storage t_algorithm_lib:others tree.reload_id.main_tree[-1][1][0]
+execute store result storage t_algorithm_lib:others tree.reload_id.main_tree[-1][1][0] int 1 run scoreboard players add #tal.tree.reload_id.index tal.input 1
