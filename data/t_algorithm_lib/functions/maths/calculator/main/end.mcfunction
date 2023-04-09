@@ -1,3 +1,0 @@
-data modify storage t_algorithm_lib:maths calculator.result set from storage t_algorithm_lib:maths calculator.main.stack[0][1][0][0]
-execute if score #tal.maths.calculator.remind tal.input matches 1 run tellraw @a ["运算结束\nresult: ",{"nbt":"calculator.main.stack[0][1][0]","storage": "t_algorithm_lib:maths","color": "green"}]
-execute if score #tal.maths.calculator.remind tal.input matches 1 run playsound entity.player.levelup voice @a ~ ~ ~ 1 2

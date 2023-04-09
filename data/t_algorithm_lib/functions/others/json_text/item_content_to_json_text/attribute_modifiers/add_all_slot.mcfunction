@@ -1,6 +1,0 @@
-data modify storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.mainhand append from storage t_algorithm_lib:item_to_json temp.AttributeModifiers.text
-data modify storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.offhand append from storage t_algorithm_lib:item_to_json temp.AttributeModifiers.text
-data modify storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.feet append from storage t_algorithm_lib:item_to_json temp.AttributeModifiers.text
-data modify storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.legs append from storage t_algorithm_lib:item_to_json temp.AttributeModifiers.text
-data modify storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.chest append from storage t_algorithm_lib:item_to_json temp.AttributeModifiers.text
-data modify storage t_algorithm_lib:item_to_json temp.item_AttributeModifiers.head append from storage t_algorithm_lib:item_to_json temp.AttributeModifiers.text
